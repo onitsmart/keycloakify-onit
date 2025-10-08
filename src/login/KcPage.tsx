@@ -1,3 +1,5 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../css/main.css";
 import { Suspense, lazy } from "react";
 import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
@@ -37,4 +39,11 @@ export default function KcPage(props: { kcContext: KcContext }) {
     );
 }
 
-const classes = {} satisfies { [key in ClassKey]?: string };
+const classes = {
+    kcLabelClass: "form-label col-form-label",
+    kcInputClass: "form-control",
+    kcInputGroup: "input-group",
+    kcFormPasswordVisibilityButtonClass: "btn btn-outline-secondary py-0",
+    kcButtonPrimaryClass: "btn btn-primary",
+    kcFormSocialAccountListButtonClass: "btn btn-outline-secondary w-100", //fix hover
+} satisfies { [key in ClassKey]?: string };
