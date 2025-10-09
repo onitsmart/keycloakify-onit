@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/main.css";
+import "./css/main.css";
 import { Suspense, lazy } from "react";
 import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
@@ -45,5 +45,6 @@ const classes = {
     kcInputGroup: "input-group",
     kcFormPasswordVisibilityButtonClass: "btn btn-outline-secondary py-0",
     kcButtonPrimaryClass: "btn btn-primary",
-    kcFormSocialAccountListButtonClass: "btn btn-outline-secondary w-100", //fix hover
+    kcFormSocialAccountListButtonClass: "btn btn-outline-secondary w-100", //hover -> main.css
+    // kcInputErrorMessageClass: "text-danger", //should be "invalid-feedback" + the input should have "is-invalid" and aria-invalid=true
 } satisfies { [key in ClassKey]?: string };

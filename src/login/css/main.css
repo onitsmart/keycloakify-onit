@@ -1,0 +1,44 @@
+@import "./fonts.css";
+
+:root {
+    --color-text-inverse: #fff;
+}
+
+body {
+    font-family: "Inter";
+}
+
+.kcBodyClass #storybook-root {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.kcLoginClass {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+}
+
+hr {
+    margin-top: 2rem !important;
+    margin-bottom: 1.75rem !important;
+}
+
+.checkbox label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label input {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+a.btn-outline-secondary:hover i, 
+a.btn-outline-secondary:hover span {
+    color: var(--color-text-inverse);
+}
+
