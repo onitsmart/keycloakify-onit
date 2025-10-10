@@ -40,11 +40,22 @@ export default function KcPage(props: { kcContext: KcContext }) {
 }
 
 const classes = {
-    kcLabelClass: "form-label col-form-label",
+    kcLoginClass: "onit-panel",
+    kcFormCardClass: "onit-form",
+    kcFormHeaderClass: "onit-form-header",
+    kcFormGroupClass: "onit-form-group",
+    kcFormSettingClass: "onit-form-settings",
+    kcSignUpClass: "onit-sign-up",
+    kcInfoAreaWrapperClass: "onit-info-area-wrapper",
+    kcLabelClass: "form-label",
     kcInputClass: "form-control",
     kcInputGroup: "input-group",
-    kcFormPasswordVisibilityButtonClass: "btn btn-outline-secondary py-0",
-    kcButtonPrimaryClass: "btn btn-primary",
+    kcInputErrorMessageClass: "error-message",
+    kcFormPasswordVisibilityButtonClass: "btn btn-visibility-toggle py-0",
+    kcButtonClass: "btn",
+    kcButtonPrimaryClass: "btn-primary",
+    kcButtonBlockClass: "w-100",
+    kcButtonLargeClass: "btn-lg",
     kcFormSocialAccountListButtonClass: "btn btn-outline-secondary w-100", //hover -> main.css
     // kcInputErrorMessageClass: "text-danger", //should be "invalid-feedback" + the input should have "is-invalid" and aria-invalid=true
 } satisfies { [key in ClassKey]?: string };

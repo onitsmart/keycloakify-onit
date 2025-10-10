@@ -1,0 +1,55 @@
+@import "./fonts.css";
+@import "./parameters.css";
+
+a {
+    display: flex; 
+    align-items: center;
+    gap: var(--display-insets-xs);
+    font-weight: var(--font-weight-regular);
+    line-height: 100%;
+    color: var(--color-text-primary) !important;
+}
+    a:hover, a.hover,
+    a:focus, a.focus {
+        color: var(--color-text-primary-hover) !important;
+    }
+
+.btn {
+    background-image: none;
+    box-shadow: none;
+    display: flex; 
+    align-items: center;
+    gap: var(--display-insets-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: 100%;
+    border-radius: var(--corner-radius-xs);
+    padding: var(--button-padding-y) var(--button-padding-x);
+}
+    .btn-lg {
+        font-weight: var(--font-weight-semibold);
+        border-radius: var(--corner-radius-sm);
+        padding: var(--button-large-padding-y) var(--button-large-padding-x);
+    }
+    .btn-primary {
+        color: var(--color-text-inverse) !important;
+        border-color: var(--color-background-primary) !important;
+        background-color: var(--color-background-primary) !important;
+    }
+        .btn-primary:hover, .btn-primary.hover,
+        .btn-primary:focus, .btn-primary.focus {
+            border-color: var(--color-background-primary-hover) !important;
+            background-color: var(--color-background-primary-hover) !important;
+        }
+
+    .btn-visibility-toggle {
+        border: 1px solid var(--color-border-subtle);
+    }
+        .btn-visibility-toggle:hover, .btn-visibility-toggle.hover,
+        .btn-visibility-toggle:focus, .btn-visibility-toggle.focus {
+            border-color: var(--color-border-primary-hover);
+        }
+
+.btn-outline-secondary:hover, .btn-outline-secondary.hover,
+.btn-outline-secondary:focus, .btn-outline-secondary.focus  {
+    color: var(--color-text-inverse) !important;
+}

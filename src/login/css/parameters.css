@@ -1,0 +1,96 @@
+:root {
+    /* Font weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Primitives: sizes */
+    --size-4px: 0.25rem;
+    --size-8px: 0.5rem;
+    --size-12px: 0.75rem;
+    --size-14px: 0.875rem;
+    --size-16px: 1rem;
+    --size-18px: 1.125rem;
+    --size-20px: 1.25rem;
+    --size-24px: 1.5rem;
+    --size-28px: 1.75rem;
+    --size-30px: 1.875rem; /*???*/
+    --size-32px: 2rem;
+    --size-38px: 2.375rem; /*???*/
+    --size-64px: 4rem;
+
+    /* Font sizes */
+    --font-size-small: var(--size-14px);
+    --font-size-base: var(--size-16px);
+    --font-size-large: var(--size-18px);
+    --font-size-heading-1: var(--size-28px);
+
+    /* Line-heights */
+    --line-height-small: var(--size-20px);
+    --line-height-base: var(--size-24px);
+    --line-height-large: var(--size-30px);
+    --line-height-heading-1: var(--size-38px);
+
+    /* Insets */
+    --display-insets-xs: var(--size-4px);
+    --display-insets-sm: var(--size-8px);
+    --display-insets-md: var(--size-12px);
+    --display-insets-xl: var(--size-20px);
+
+    /* Stacks */
+    --display-stacks-lg: var(--size-16px);
+    --display-stacks-2xl: var(--size-32px);
+
+    /* Paddings */
+    --panel-login-padding-x: var(--size-64px);
+    --panel-login-padding-y: var(--size-64px);
+    --input-padding-x: var(--display-insets-md);
+    --input-padding-y: var(--display-insets-sm);
+    --button-padding-x: var(--display-insets-md);
+    --button-padding-y: var(--display-insets-sm);
+    --button-large-padding-x: var(--display-insets-xl);
+    --button-large-padding-y: var(--display-insets-md);
+
+    /* Corner-radius */
+    --corner-radius-xs: var(--size-4px);
+    --corner-radius-sm: var(--size-8px);
+    --corner-radius-panel-login: var(--size-12px); 
+    
+    /* Primitives: colors */
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gray-100: #F3F4F6;
+    --color-gray-500: #6B7080;
+    --color-gray-900: #111827;
+    --color-zinc-200: #E4E4E7;
+    --color-red-400: #F87171;
+    --color-red-500: #EF4444;
+    --color-red-600: #DC2626;
+    --color-red-700: #B91C1C;
+    --color-midnight-blue-400: #3488C8;
+    --color-midnight-blue-500: #1566A2;
+
+    /* Colors - light: text */
+    --color-text-base: var(--color-gray-900);
+    --color-text-muted: var(--color-gray-500);
+    --color-text-inverse: var(--color-gray-100);
+    --color-text-primary: var(--color-midnight-blue-500);
+    --color-text-primary-hover: var(--color-midnight-blue-400);
+    --color-text-danger: var(--color-red-600);
+    --color-text-danger-hover: var(--color-red-500);
+    /* Colors - light: border */
+    --color-border-subtle: var(--color-zinc-200);
+    --color-border-primary-hover: var(--color-midnight-blue-400);
+    --color-border-danger: var(--color-red-600);
+    /* Colors - light: background */
+    --color-background-default: var(--color-white);
+    --color-background-primary: var(--color-midnight-blue-500);
+    --color-background-primary-hover: var(--color-midnight-blue-400);
+    --color-background-danger: var(--color-red-700);
+    --color-background-danger-hover: var(--color-red-500);
+
+    /* Colors - dark */
+}

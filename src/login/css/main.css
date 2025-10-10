@@ -1,24 +1,8 @@
-@import "./fonts.css";
-
-:root {
-    --color-text-inverse: #fff;
-}
+@import "./typography.css";
 
 body {
     font-family: "Inter";
-}
-
-.kcBodyClass #storybook-root {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
-
-.kcLoginClass {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5rem;
+    color: var(--color-text-base);
 }
 
 hr {
@@ -26,19 +10,121 @@ hr {
     margin-bottom: 1.75rem !important;
 }
 
-.checkbox label {
+.kcBodyClass #storybook-root {
     display: flex;
+    justify-content: center;
+    height: 70%;
+}
+
+.onit-panel {
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    gap: 5rem;
+    background-color: var(--color-background-default) !important;
+    height: fit-content;
+    padding: var(--panel-login-padding-y) var(--panel-login-padding-x);
+    border-radius: var(--corner-radius-panel-login);
+    margin-bottom: 0 !important;
 }
 
-.checkbox label input {
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+.onit-sign-up {
+    margin: var(--display-stacks-2xl) 0 0 0 !important;
+}
+    .onit-info-area-wrapper {
+        font-size: var(--font-size-small);
+        padding: 0 !important;
+        background-color: transparent !important;
+    }
+        .onit-info-area-wrapper #kc-registration span {
+            display: flex; 
+            align-items: center;
+            gap: var(--display-insets-sm);
+        }
+
+.onit-form {
+    height: fit-content;
+    width: fit-content;
+}
+    .onit-form #kc-content-wrapper {
+        margin-top: var(--display-stacks-2xl);
+    }
+
+.onit-form-header h1 {
+    font-size: var(--font-size-heading-1);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-heading-1);
 }
 
-a.btn-outline-secondary:hover i, 
-a.btn-outline-secondary:hover span {
-    color: var(--color-text-inverse);
+.onit-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--display-insets-sm);
+    margin-top: var(--display-stacks-lg);
 }
+    .onit-form-group:first-child {
+        margin-top: 0 !important;
+    }
+    .onit-form-group:last-child { /*submit button -> use #kc-login instead?*/
+        margin-top: var(--display-stacks-2xl) !important;
+        margin-bottom: var(--display-stacks-2xl) !important;
+    }
+
+    .onit-form-group:has( .error-message) {
+        color: var(--color-text-danger) !important;
+    }
+        .onit-form-group:has( .error-message) input {
+            border-color: var(--color-border-danger) !important;
+        }
+
+.onit-form-settings {
+    display: flex;
+    flex-direction: column; 
+    gap: var(--display-stacks-2xl);
+    margin-top: var(--display-stacks-2xl);
+}
+    .checkbox {
+        margin-bottom: 0;
+    }
+        .checkbox label {
+            display: flex;
+            align-items: center;
+            gap: var(--display-insets-sm) !important;
+        }
+        .checkbox input {
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+label {
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+    line-height: 100%;
+    margin: 0 !important;
+}
+    label span {
+        margin: 0;
+    }
+
+.form-control {
+    box-shadow: none;
+    border: 1px solid var(--color-border-subtle);
+    padding: var(--input-padding-y) var(--input-padding-x);
+    height: calc(2px + var(--input-padding-y) + var(--input-padding-x) + var(--font-size-base));
+}
+    .form-control:hover, .form-control.hover,
+    .form-control:focus, .form-control.focus {
+        border-color: var(--color-border-primary-hover);
+    }
+    input[type=checkbox] {
+        height: var(--font-size-base);
+        width: var(--font-size-base);
+        color: var(--color-border-subtle) !important;
+        border: 1px solid var(--color-border-subtle) !important;
+        border-radius: var(--corner-radius-xs);
+    }
+
+
 
