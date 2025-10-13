@@ -40,22 +40,22 @@ export default function KcPage(props: { kcContext: KcContext }) {
 }
 
 const classes = {
-    kcLoginClass: "onit-panel",
-    kcFormCardClass: "onit-form",
-    kcFormHeaderClass: "onit-form-header",
-    kcFormGroupClass: "onit-form-group",
-    kcFormSettingClass: "onit-form-settings",
-    kcSignUpClass: "onit-sign-up",
-    kcInfoAreaWrapperClass: "onit-info-area-wrapper",
-    kcLabelClass: "form-label",
-    kcInputClass: "form-control",
-    kcInputGroup: "input-group",
-    kcInputErrorMessageClass: "error-message",
-    kcFormPasswordVisibilityButtonClass: "btn btn-visibility-toggle py-0",
-    kcButtonClass: "btn",
-    kcButtonPrimaryClass: "btn-primary",
+    kcAlertClass: "alert",
     kcButtonBlockClass: "w-100",
+    kcButtonClass: "btn",
     kcButtonLargeClass: "btn-lg",
+    kcButtonPrimaryClass: "btn-primary",
+    kcFormCardClass: "onit-form",
+    kcFormGroupClass: "onit-form-group",
+    kcFormHeaderClass: "onit-form-header",
+    kcFormPasswordVisibilityButtonClass: "btn btn-visibility-toggle py-0",
+    kcFormSettingClass: "onit-form-settings",
     kcFormSocialAccountListButtonClass: "btn btn-outline-secondary w-100", //hover -> main.css
-    // kcInputErrorMessageClass: "text-danger", //should be "invalid-feedback" + the input should have "is-invalid" and aria-invalid=true
+    kcInfoAreaWrapperClass: "onit-info-area-wrapper",
+    kcInputClass: "form-control",
+    kcInputErrorMessageClass: "error-message",
+    kcInputGroup: "input-group",
+    kcLabelClass: "form-label",
+    kcLoginClass: "onit-panel",
+    kcSignUpClass: "onit-sign-up",
 } satisfies { [key in ClassKey]?: string };

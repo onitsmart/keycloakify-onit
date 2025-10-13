@@ -11,9 +11,11 @@ hr {
 }
 
 .kcBodyClass #storybook-root {
+    justify-self: center;
     display: flex;
     justify-content: center;
-    height: 70%;
+    height: fit-content;
+    padding-top: var(--display-stacks-2xl);
 }
 
 .onit-panel {
@@ -32,7 +34,7 @@ hr {
     margin: var(--display-stacks-2xl) 0 0 0 !important;
 }
     .onit-info-area-wrapper {
-        font-size: var(--font-size-small);
+        font-size: var(--font-size-small) !important;
         padding: 0 !important;
         background-color: transparent !important;
     }
@@ -75,6 +77,7 @@ hr {
         color: var(--color-text-danger) !important;
     }
         .onit-form-group:has( .error-message) input {
+            //color: var(--color-text-danger) !important;
             border-color: var(--color-border-danger) !important;
         }
 
@@ -127,4 +130,32 @@ label {
     }
 
 
+.alert {
+    display: flex;
+    align-items: center;
+    gap: var(--display-stacks-md);
+}
+    .alert > * {
+        font-size: var(--font-size-base) !important;
+    }
 
+    .alert-info {
+        color: var(--color-text-info);
+        border-color: var(--color-border-info);
+        background-color: var(--color-background-info-outline);
+    }
+    .alert-success {
+        color: var(--color-text-success);
+        border-color: var(--color-border-success);
+        background-color: var(--color-background-success-outline);
+    }
+    .alert-warning {
+        color: var(--color-text-warning);
+        border-color: var(--color-border-warning);
+        background-color: var(--color-background-warning-outline);
+    }
+    .alert-error {
+        color: var(--color-text-danger);
+        border-color: var(--color-border-danger);
+        background-color: var(--color-background-danger-outline);
+    }

@@ -41,6 +41,7 @@
     --display-insets-xl: var(--size-20px);
 
     /* Stacks */
+    --display-stacks-md: var(--size-12px);
     --display-stacks-lg: var(--size-16px);
     --display-stacks-2xl: var(--size-32px);
 
@@ -65,13 +66,29 @@
     --color-gray-100: #F3F4F6;
     --color-gray-500: #6B7080;
     --color-gray-900: #111827;
-    --color-zinc-200: #E4E4E7;
+    --color-blue-50: #EFF6FF;
+    --color-blue-100: #DBEAFE;
+    --color-blue-500: #3B82F6;
+    --color-blue-600: #2563EB;
+    --color-green-50: #F0FDF4;
+    --color-green-100: #DCFCE7;
+    --color-green-500: #22C55E;
+    --color-green-600: #16A34A;
+    --color-green-700: #15803D;
+    --color-midnight-blue-400: #3488C8;
+    --color-midnight-blue-500: #1566A2;
+    --color-red-50: #FEF2F2;
+    --color-red-100: #FEE2E2;
     --color-red-400: #F87171;
     --color-red-500: #EF4444;
     --color-red-600: #DC2626;
     --color-red-700: #B91C1C;
-    --color-midnight-blue-400: #3488C8;
-    --color-midnight-blue-500: #1566A2;
+    --color-yellow-50: #FEFCE8;
+    --color-yellow-100: #FEF9C3;
+    --color-yellow-500: #EAB308;
+    --color-yellow-600: #CA8A04;
+    --color-yellow-700: #A16207;
+    --color-zinc-200: #E4E4E7;
 
     /* Colors - light: text */
     --color-text-base: var(--color-gray-900);
@@ -79,18 +96,38 @@
     --color-text-inverse: var(--color-gray-100);
     --color-text-primary: var(--color-midnight-blue-500);
     --color-text-primary-hover: var(--color-midnight-blue-400);
+    --color-text-info: var(--color-blue-600);
+    --color-text-success: var(--color-green-600);
+    --color-text-warning: var(--color-yellow-700);
     --color-text-danger: var(--color-red-600);
     --color-text-danger-hover: var(--color-red-500);
     /* Colors - light: border */
     --color-border-subtle: var(--color-zinc-200);
     --color-border-primary-hover: var(--color-midnight-blue-400);
+    --color-border-info: var(--color-blue-600);
+    --color-border-success: var(--color-green-600);
+    --color-border-warning: var(--color-yellow-600);
     --color-border-danger: var(--color-red-600);
     /* Colors - light: background */
     --color-background-default: var(--color-white);
     --color-background-primary: var(--color-midnight-blue-500);
     --color-background-primary-hover: var(--color-midnight-blue-400);
+    --color-background-info: var(--color-blue-600);
+    --color-background-info-hover: var(--color-blue-500);
+    --color-background-info-outline: var(--color-blue-100);
+    --color-background-info-outline-hover: var(--color-blue-50);
+    --color-background-success: var(--color-green-700);
+    --color-background-success-hover: var(--color-green-500);
+    --color-background-success-outline: var(--color-green-100);
+    --color-background-success-outline-hover: var(--color-green-50);
+    --color-background-warning: var(--color-yellow-700);
+    --color-background-warning-hover: var(--color-yellow-500);
+    --color-background-warning-outline: var(--color-yellow-100);
+    --color-background-warning-outline-hover: var(--color-yellow-50);
     --color-background-danger: var(--color-red-700);
     --color-background-danger-hover: var(--color-red-500);
+    --color-background-danger-outline: var(--color-red-100);
+    --color-background-danger-outline-hover: var(--color-red-50);
 
     /* Colors - dark */
 }
