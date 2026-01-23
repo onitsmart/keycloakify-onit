@@ -41,6 +41,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
 
 const classes = {
     kcAlertClass: "alert",
+    kcBodyClass: "onit-body",
     kcButtonBlockClass: "w-100",
     kcButtonClass: "btn",
     kcButtonLargeClass: "btn-lg",

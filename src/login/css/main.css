@@ -10,24 +10,35 @@ hr {
     margin-bottom: 1.75rem !important;
 }
 
-.kcBodyClass #storybook-root {
-    justify-self: center;
+.kcBodyClass #storybook-root { /* only in DEV + not updated */
+    /* justify-self: center;
     display: flex;
     justify-content: center;
     height: fit-content;
-    padding-top: var(--display-stacks-2xl);
+    padding-top: var(--display-stacks-2xl); */
+}
+
+.kcBodyClass #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-background-subtle);
 }
 
 .onit-panel {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 5rem;
-    background-color: var(--color-background-default) !important;
+    gap: 5rem; /* use a var */
     height: fit-content;
-    padding: var(--panel-login-padding-y) var(--panel-login-padding-x);
+    min-width: 50%; /* check + change for mobile */ 
     border-radius: var(--corner-radius-panel-login);
-    margin-bottom: 0 !important;
+    background-color: var(--color-background-default);
+    padding: var(--panel-login-padding-y) var(--panel-login-padding-x);
+    margin-bottom: 0;
 }
 
 .onit-sign-up {
@@ -45,10 +56,11 @@ hr {
         }
 
 .onit-form {
-    height: fit-content;
-    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-    .onit-form #kc-content-wrapper {
+    .onit-form #kc-content-wrapper { /*  */
         margin-top: var(--display-stacks-2xl);
     }
 
@@ -77,7 +89,7 @@ hr {
         color: var(--color-text-danger) !important;
     }
         .onit-form-group:has( .error-message) input {
-            //color: var(--color-text-danger) !important;
+            /*color: var(--color-text-danger) !important;*/
             border-color: var(--color-border-danger) !important;
         }
 

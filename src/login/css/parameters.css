@@ -1,65 +1,5 @@
+/* Colors */
 :root {
-    /* Font weights */
-    --font-weight-light: 300;
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-    --font-weight-black: 900;
-
-    /* Primitives: sizes */
-    --size-4px: 0.25rem;
-    --size-8px: 0.5rem;
-    --size-12px: 0.75rem;
-    --size-14px: 0.875rem;
-    --size-16px: 1rem;
-    --size-18px: 1.125rem;
-    --size-20px: 1.25rem;
-    --size-24px: 1.5rem;
-    --size-28px: 1.75rem;
-    --size-30px: 1.875rem; /*???*/
-    --size-32px: 2rem;
-    --size-38px: 2.375rem; /*???*/
-    --size-64px: 4rem;
-
-    /* Font sizes */
-    --font-size-small: var(--size-14px);
-    --font-size-base: var(--size-16px);
-    --font-size-large: var(--size-18px);
-    --font-size-heading-1: var(--size-28px);
-
-    /* Line-heights */
-    --line-height-small: var(--size-20px);
-    --line-height-base: var(--size-24px);
-    --line-height-large: var(--size-30px);
-    --line-height-heading-1: var(--size-38px);
-
-    /* Insets */
-    --display-insets-xs: var(--size-4px);
-    --display-insets-sm: var(--size-8px);
-    --display-insets-md: var(--size-12px);
-    --display-insets-xl: var(--size-20px);
-
-    /* Stacks */
-    --display-stacks-md: var(--size-12px);
-    --display-stacks-lg: var(--size-16px);
-    --display-stacks-2xl: var(--size-32px);
-
-    /* Paddings */
-    --panel-login-padding-x: var(--size-64px);
-    --panel-login-padding-y: var(--size-64px);
-    --input-padding-x: var(--display-insets-md);
-    --input-padding-y: var(--display-insets-sm);
-    --button-padding-x: var(--display-insets-md);
-    --button-padding-y: var(--display-insets-sm);
-    --button-large-padding-x: var(--display-insets-xl);
-    --button-large-padding-y: var(--display-insets-md);
-
-    /* Corner-radius */
-    --corner-radius-xs: var(--size-4px);
-    --corner-radius-sm: var(--size-8px);
-    --corner-radius-panel-login: var(--size-12px); 
-    
     /* Primitives: colors */
     --color-black: #000;
     --color-white: #fff;
@@ -88,30 +28,38 @@
     --color-yellow-500: #EAB308;
     --color-yellow-600: #CA8A04;
     --color-yellow-700: #A16207;
+    --color-violet-600: #7C3AED;
+    --color-violet-700: #6D28D9;
+    --color-zinc-100: #F4F4F5;
     --color-zinc-200: #E4E4E7;
 
     /* Colors - light: text */
     --color-text-base: var(--color-gray-900);
     --color-text-muted: var(--color-gray-500);
     --color-text-inverse: var(--color-gray-100);
-    --color-text-primary: var(--color-midnight-blue-500);
-    --color-text-primary-hover: var(--color-midnight-blue-400);
+    --color-text-accent: var(--color-midnight-blue-500); /*hyperlink*/
+    --color-text-accent-hover: var(--color-midnight-blue-400); /*hyperlink hover*/
+    --color-text-primary: var(--color-violet-700);
     --color-text-info: var(--color-blue-600);
     --color-text-success: var(--color-green-600);
     --color-text-warning: var(--color-yellow-700);
     --color-text-danger: var(--color-red-600);
     --color-text-danger-hover: var(--color-red-500);
+
     /* Colors - light: border */
     --color-border-subtle: var(--color-zinc-200);
-    --color-border-primary-hover: var(--color-midnight-blue-400);
+    --color-border-primary: var(--color-violet-700);
+    --color-border-primary-hover: var(--color-violet-600);
     --color-border-info: var(--color-blue-600);
     --color-border-success: var(--color-green-600);
     --color-border-warning: var(--color-yellow-600);
     --color-border-danger: var(--color-red-600);
+
     /* Colors - light: background */
     --color-background-default: var(--color-white);
-    --color-background-primary: var(--color-midnight-blue-500);
-    --color-background-primary-hover: var(--color-midnight-blue-400);
+    --color-background-subtle: var(--color-zinc-100);
+    --color-background-primary: var(--color-violet-700);
+    --color-background-primary-hover: var(--color-violet-600); /*check*/
     --color-background-info: var(--color-blue-600);
     --color-background-info-hover: var(--color-blue-500);
     --color-background-info-outline: var(--color-blue-100);
@@ -131,3 +79,74 @@
 
     /* Colors - dark */
 }
+
+/* Typography */
+
+:root {
+    /* Primitives: sizes */
+    --size-4px: 0.25rem;
+    --size-8px: 0.5rem;
+    --size-12px: 0.75rem;
+    --size-14px: 0.875rem;
+    --size-16px: 1rem;
+    --size-18px: 1.125rem;
+    --size-20px: 1.25rem;
+    --size-24px: 1.5rem;
+    --size-28px: 1.75rem;
+    --size-30px: 1.875rem; /*???*/
+    --size-32px: 2rem;
+    --size-38px: 2.375rem; /*???*/
+    --size-64px: 4rem;
+
+    /* Font weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Font sizes */
+    --font-size-small: var(--size-14px);
+    --font-size-base: var(--size-16px);
+    --font-size-large: var(--size-18px);
+    --font-size-heading-1: var(--size-28px);
+
+    /* Line-heights */
+    --line-height-small: var(--size-20px);
+    --line-height-base: var(--size-24px);
+    --line-height-large: var(--size-30px);
+    --line-height-heading-1: var(--size-38px);
+
+    /* Stacks */
+    --display-stacks-md: var(--size-12px);
+    --display-stacks-lg: var(--size-16px);
+    --display-stacks-2xl: var(--size-32px);
+
+    /* Insets */
+    --display-insets-xs: var(--size-4px);
+    --display-insets-sm: var(--size-8px);
+    --display-insets-md: var(--size-12px);
+    --display-insets-xl: var(--size-20px);
+
+    /* Paddings */
+    --panel-login-padding-x: var(--size-64px);
+    --panel-login-padding-y: var(--size-64px);
+    --input-padding-x: var(--display-insets-md);
+    --input-padding-y: var(--display-insets-sm);
+    --button-padding-x: var(--display-insets-md);
+    --button-padding-y: var(--display-insets-sm);
+    --button-large-padding-x: var(--display-insets-xl);
+    --button-large-padding-y: var(--display-insets-md);
+
+    /* Corner-radius */
+    --corner-radius-xs: var(--size-4px);
+    --corner-radius-sm: var(--size-8px);
+    --corner-radius-panel-login: var(--size-12px); 
+    
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
