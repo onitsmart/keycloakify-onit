@@ -2,6 +2,7 @@
 :root {
     /* Primitives: colors */
     --color-black: #000;
+    --color-black-opacity-75: rgba(0, 0, 0, 0.75);
     --color-white: #fff;
     --color-gray-100: #F3F4F6;
     --color-gray-500: #6B7080;
@@ -28,8 +29,10 @@
     --color-yellow-500: #EAB308;
     --color-yellow-600: #CA8A04;
     --color-yellow-700: #A16207;
+    --color-violet-500: #8B5CF6;
     --color-violet-600: #7C3AED;
     --color-violet-700: #6D28D9;
+    --color-violet-700-opacity-60: rgba(109, 40, 217, 0.6);
     --color-zinc-100: #F4F4F5;
     --color-zinc-200: #E4E4E7;
 
@@ -37,9 +40,10 @@
     --color-text-base: var(--color-gray-900);
     --color-text-muted: var(--color-gray-500);
     --color-text-inverse: var(--color-gray-100);
-    --color-text-accent: var(--color-midnight-blue-500); /*hyperlink*/
-    --color-text-accent-hover: var(--color-midnight-blue-400); /*hyperlink hover*/
+    --color-text-accent: var(--color-midnight-blue-500);
+    --color-text-accent-hover: var(--color-midnight-blue-400); /* not used */
     --color-text-primary: var(--color-violet-700);
+    --color-text-primary-hover: var(--color-violet-500);
     --color-text-info: var(--color-blue-600);
     --color-text-success: var(--color-green-600);
     --color-text-warning: var(--color-yellow-700);
@@ -54,6 +58,10 @@
     --color-border-success: var(--color-green-600);
     --color-border-warning: var(--color-yellow-600);
     --color-border-danger: var(--color-red-600);
+
+    /* Colors - light: box-shadow */
+    --color-box-shadow-primary-start: var(--color-black-opacity-75);
+    --color-box-shadow-primary-end: var(--color-violet-700-opacity-60);
 
     /* Colors - light: background */
     --color-background-default: var(--color-white);
@@ -78,6 +86,8 @@
     --color-background-danger-outline-hover: var(--color-red-50);
 
     /* Colors - dark */
+
+    /* -bs vars? -> use inspector (eg: btn-primary) */
 }
 
 /* Typography */
@@ -93,10 +103,12 @@
     --size-20px: 1.25rem;
     --size-24px: 1.5rem;
     --size-28px: 1.75rem;
-    --size-30px: 1.875rem; /*???*/
     --size-32px: 2rem;
-    --size-38px: 2.375rem; /*???*/
+    --size-40px: 2.5rem; 
     --size-64px: 4rem;
+
+    /* Font family */
+    --font-family-base: "Inter", sans-serif;
 
     /* Font weights */
     --font-weight-light: 300;
@@ -115,29 +127,8 @@
     /* Line-heights */
     --line-height-small: var(--size-20px);
     --line-height-base: var(--size-24px);
-    --line-height-large: var(--size-30px);
-    --line-height-heading-1: var(--size-38px);
-
-    /* Stacks */
-    --display-stacks-md: var(--size-12px);
-    --display-stacks-lg: var(--size-16px);
-    --display-stacks-2xl: var(--size-32px);
-
-    /* Insets */
-    --display-insets-xs: var(--size-4px);
-    --display-insets-sm: var(--size-8px);
-    --display-insets-md: var(--size-12px);
-    --display-insets-xl: var(--size-20px);
-
-    /* Paddings */
-    --panel-login-padding-x: var(--size-64px);
-    --panel-login-padding-y: var(--size-64px);
-    --input-padding-x: var(--display-insets-md);
-    --input-padding-y: var(--display-insets-sm);
-    --button-padding-x: var(--display-insets-md);
-    --button-padding-y: var(--display-insets-sm);
-    --button-large-padding-x: var(--display-insets-xl);
-    --button-large-padding-y: var(--display-insets-md);
+    --line-height-large: var(--size-32px);
+    --line-height-heading-1: var(--size-40px);
 
     /* Corner-radius */
     --corner-radius-xs: var(--size-4px);
@@ -147,6 +138,51 @@
 }
 
 @media screen and (min-width: 992px) {
-
+    :root {
+        
+    }
 }
 
+/* Spacings */
+
+:root {
+    /* Primitives: spacings */
+    --spacing-4: 0.25rem;
+    --spacing-8: 0.5rem;
+    --spacing-12: 0.75rem;
+    --spacing-16: 1rem;
+    --spacing-20: 1.25rem;
+    --spacing-24: 1.5rem;
+    --spacing-28: 1.75rem;
+    --spacing-32: 2rem;
+    --spacing-64: 4rem;
+
+    /* Stacks */
+    --display-stacks-md: var(--spacing-12);
+    --display-stacks-lg: var(--spacing-16);
+    --display-stacks-xl: var(--spacing-24);
+    --display-stacks-2xl: var(--spacing-32);
+
+    /* Insets */
+    --display-insets-xs: var(--spacing-4);
+    --display-insets-sm: var(--spacing-8);
+    --display-insets-md: var(--spacing-12);
+    --display-insets-lg: var(--spacing-16);
+    --display-insets-xl: var(--spacing-20);
+
+    /* Paddings */
+    --panel-login-padding-x: var(--spacing-64);
+    --panel-login-padding-y: var(--spacing-64);
+    --input-padding-x: var(--display-insets-md);
+    --input-padding-y: var(--display-insets-sm);
+    --button-padding-x: var(--display-insets-md);
+    --button-padding-y: var(--display-insets-sm);
+    --button-large-padding-x: var(--display-insets-xl);
+    --button-large-padding-y: var(--display-insets-md);
+}
+
+@media screen and (min-width: 992px) {
+    :root {
+
+    }
+}

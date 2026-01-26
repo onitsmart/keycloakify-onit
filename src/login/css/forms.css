@@ -1,0 +1,113 @@
+@import "./typography.css";
+
+/* General */
+
+label {
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+    line-height: 100%;
+    margin: 0 !important;
+}
+    label span {
+        margin: 0;
+    }
+
+input[type=checkbox] {
+    height: var(--font-size-base);
+    width: var(--font-size-base);
+    color: var(--color-border-subtle) !important;
+    border: 1px solid var(--color-border-subtle) !important;
+    border-radius: var(--corner-radius-xs);
+}
+
+/* Forms */
+
+.onit-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Form header */ 
+/* = ".onit-form > .onit-form-header" */
+
+.onit-form-header h1 {
+    font-size: var(--font-size-heading-1);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-heading-1);
+}
+
+/* Form groups */
+/* = ".onit-form > div#kc-content > div#kc-content-wrapper > div#form > div#form-wrapper > form > .onit-form-group" */
+
+.onit-form form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--display-insets-lg);
+}
+
+.onit-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--display-insets-sm);
+}
+    /*submit button -> use #kc-login instead?*/
+    /* .onit-form-group:last-child { 
+        margin-top: var(--display-stacks-2xl) !important;
+        margin-bottom: var(--display-stacks-2xl) !important;
+    } */
+
+    .onit-form-group:has( .error-message) {
+        color: var(--color-text-danger) !important;
+    }
+        .onit-form-group:has( .error-message) input {
+            /*color: var(--color-text-danger) !important;*/
+            border-color: var(--color-border-danger) !important;
+        }
+
+/* Labels & inputs */
+/* = ".onit-form-group > label.form-label" & ".onit-form-group > input.form-control" */
+
+.form-control {
+    box-shadow: none;
+    border: 1px solid var(--color-border-subtle);
+    padding: var(--input-padding-y) var(--input-padding-x);
+    height: calc(2px + var(--input-padding-y) + var(--input-padding-x) + var(--font-size-base));
+}
+    .form-control:hover, 
+    .form-control.hover {
+        border-width: 1.5px;
+        border-color: var(--color-border-primary-hover);
+    }
+
+    .form-control:focus, 
+    .form-control.focus {
+        border-color: var(--color-border-primary-hover);
+        box-shadow: 0 0 7px var(--color-box-shadow-primary-end);
+    }
+
+/* Form settings -> remember me + forgot password */
+/* = ".onit-form-group.onit-form-settings" */
+
+.onit-form-settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--display-stacks-md);
+    margin-top: var(--display-stacks-2xl);
+}
+    .checkbox {
+        margin-bottom: 0;
+    }
+        .checkbox label {
+            display: flex;
+            align-items: center;
+            gap: var(--display-insets-sm) !important;
+        }
+        .checkbox input {
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+

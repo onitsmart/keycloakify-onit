@@ -1,7 +1,9 @@
+@import "./parameters.css";
 @import "./typography.css";
+@import "./forms.css";
 
 body {
-    font-family: "Inter";
+    font-family: var(--font-family-base);
     color: var(--color-text-base);
 }
 
@@ -10,12 +12,12 @@ hr {
     margin-bottom: 1.75rem !important;
 }
 
-.kcBodyClass #storybook-root { /* only in DEV + not updated */
-    /* justify-self: center;
+.kcBodyClass #storybook-root { /* only in DEV */
+    justify-self: center;
     display: flex;
     justify-content: center;
     height: fit-content;
-    padding-top: var(--display-stacks-2xl); */
+    padding-top: var(--display-stacks-2xl);
 }
 
 .kcBodyClass #root {
@@ -54,93 +56,6 @@ hr {
             align-items: center;
             gap: var(--display-insets-sm);
         }
-
-.onit-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-    .onit-form #kc-content-wrapper { /*  */
-        margin-top: var(--display-stacks-2xl);
-    }
-
-.onit-form-header h1 {
-    font-size: var(--font-size-heading-1);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-heading-1);
-}
-
-.onit-form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: var(--display-insets-sm);
-    margin-top: var(--display-stacks-lg);
-}
-    .onit-form-group:first-child {
-        margin-top: 0 !important;
-    }
-    .onit-form-group:last-child { /*submit button -> use #kc-login instead?*/
-        margin-top: var(--display-stacks-2xl) !important;
-        margin-bottom: var(--display-stacks-2xl) !important;
-    }
-
-    .onit-form-group:has( .error-message) {
-        color: var(--color-text-danger) !important;
-    }
-        .onit-form-group:has( .error-message) input {
-            /*color: var(--color-text-danger) !important;*/
-            border-color: var(--color-border-danger) !important;
-        }
-
-.onit-form-settings {
-    display: flex;
-    flex-direction: column; 
-    gap: var(--display-stacks-2xl);
-    margin-top: var(--display-stacks-2xl);
-}
-    .checkbox {
-        margin-bottom: 0;
-    }
-        .checkbox label {
-            display: flex;
-            align-items: center;
-            gap: var(--display-insets-sm) !important;
-        }
-        .checkbox input {
-            margin: 0;
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-
-label {
-    color: var(--color-text-muted);
-    font-weight: var(--font-weight-medium);
-    line-height: 100%;
-    margin: 0 !important;
-}
-    label span {
-        margin: 0;
-    }
-
-.form-control {
-    box-shadow: none;
-    border: 1px solid var(--color-border-subtle);
-    padding: var(--input-padding-y) var(--input-padding-x);
-    height: calc(2px + var(--input-padding-y) + var(--input-padding-x) + var(--font-size-base));
-}
-    .form-control:hover, .form-control.hover,
-    .form-control:focus, .form-control.focus {
-        border-color: var(--color-border-primary-hover);
-    }
-    input[type=checkbox] {
-        height: var(--font-size-base);
-        width: var(--font-size-base);
-        color: var(--color-border-subtle) !important;
-        border: 1px solid var(--color-border-subtle) !important;
-        border-radius: var(--corner-radius-xs);
-    }
-
 
 .alert {
     display: flex;

@@ -7,11 +7,11 @@ a {
     gap: var(--display-insets-xs);
     font-weight: var(--font-weight-regular);
     line-height: 100%;
-    color: var(--color-text-accent) !important;
+    color: var(--color-text-primary);
 }
     a:hover, a.hover,
     a:focus, a.focus {
-        color: var(--color-text-accent-hover) !important;
+        color: var(--color-text-primary-hover) !important;
     }
 
 .btn {
