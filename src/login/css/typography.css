@@ -2,12 +2,13 @@
 @import "./parameters.css";
 
 a {
-    display: flex; 
-    align-items: center;
-    gap: var(--display-insets-xs);
+    color: var(--color-text-primary);
     font-weight: var(--font-weight-regular);
     line-height: 100%;
-    color: var(--color-text-primary);
+    display: flex; 
+    align-items: center;
+    gap: var(--display-insets-sm);
+    padding: var(--display-insets-sm) 0;
 }
     a:hover, a.hover,
     a:focus, a.focus {
@@ -39,6 +40,12 @@ a {
         .btn-primary:focus, .btn-primary.focus {
             border-color: var(--color-border-primary-hover) !important;
             background-color: var(--color-background-primary-hover) !important;
+        }
+        .btn-primary:disabled, .btn-primary.disabled {
+            pointer-events: none;
+            color: var(--color-white) !important;
+            border-color: var(--color-border-primary-disabled) !important;
+            background-color: var(--color-background-primary-disabled) !important;
         }
 
     .btn-visibility-toggle {

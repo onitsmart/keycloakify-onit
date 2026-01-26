@@ -29,6 +29,8 @@
     --color-yellow-500: #EAB308;
     --color-yellow-600: #CA8A04;
     --color-yellow-700: #A16207;
+    --color-violet-300: #C4B5FD;
+    --color-violet-400: #A78BFA;
     --color-violet-500: #8B5CF6;
     --color-violet-600: #7C3AED;
     --color-violet-700: #6D28D9;
@@ -54,6 +56,7 @@
     --color-border-subtle: var(--color-zinc-200);
     --color-border-primary: var(--color-violet-700);
     --color-border-primary-hover: var(--color-violet-600);
+    --color-border-primary-disabled: var(--color-violet-300);
     --color-border-info: var(--color-blue-600);
     --color-border-success: var(--color-green-600);
     --color-border-warning: var(--color-yellow-600);
@@ -67,7 +70,8 @@
     --color-background-default: var(--color-white);
     --color-background-subtle: var(--color-zinc-100);
     --color-background-primary: var(--color-violet-700);
-    --color-background-primary-hover: var(--color-violet-600); /*check*/
+    --color-background-primary-hover: var(--color-violet-600); 
+    --color-background-primary-disabled: var(--color-violet-400);
     --color-background-info: var(--color-blue-600);
     --color-background-info-hover: var(--color-blue-500);
     --color-background-info-outline: var(--color-blue-100);
@@ -106,6 +110,7 @@
     --size-32px: 2rem;
     --size-40px: 2.5rem; 
     --size-64px: 4rem;
+    --size-80px: 5rem;
 
     /* Font family */
     --font-family-base: "Inter", sans-serif;
@@ -135,6 +140,8 @@
     --corner-radius-sm: var(--size-8px);
     --corner-radius-panel-login: var(--size-12px); 
     
+    /* Logo */
+    --max-height-footer-logo: var(--size-80px);
 }
 
 @media screen and (min-width: 992px) {
@@ -156,8 +163,10 @@
     --spacing-28: 1.75rem;
     --spacing-32: 2rem;
     --spacing-64: 4rem;
+    --spacing-24-negative: -1.5rem;
 
     /* Stacks */
+    --display-stacks-sm: var(--spacing-8);
     --display-stacks-md: var(--spacing-12);
     --display-stacks-lg: var(--spacing-16);
     --display-stacks-xl: var(--spacing-24);
@@ -169,6 +178,11 @@
     --display-insets-md: var(--spacing-12);
     --display-insets-lg: var(--spacing-16);
     --display-insets-xl: var(--spacing-20);
+    --display-insets-2xl: var(--spacing-24);
+    --display-insets-2xl-negative: var(--spacing-24-negative);
+
+    /* Others */
+    --form-stack-spacing: var(--display-insets-xl);
 
     /* Paddings */
     --panel-login-padding-x: var(--spacing-64);

@@ -12,55 +12,65 @@ hr {
     margin-bottom: 1.75rem !important;
 }
 
-.kcBodyClass #storybook-root { /* only in DEV */
+.onit-body #storybook-root { /* only in DEV */
     justify-self: center;
     display: flex;
     justify-content: center;
     height: fit-content;
+    min-width: 90%;
     padding-top: var(--display-stacks-2xl);
 }
 
-.kcBodyClass #root {
+.onit-body #root {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--color-background-subtle);
 }
+    .onit-body #root > div {
+        min-width: 70%;
+    }
 
 .onit-panel {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 5rem; /* use a var */
+    gap: 20%;
     height: fit-content;
-    min-width: 50%; /* check + change for mobile */ 
+    min-width: 50%; 
     border-radius: var(--corner-radius-panel-login);
     background-color: var(--color-background-default);
     padding: var(--panel-login-padding-y) var(--panel-login-padding-x);
     margin-bottom: 0;
 }
 
-.onit-sign-up {
-    margin: var(--display-stacks-2xl) 0 0 0 !important;
+.onit-form-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 50%;
 }
-    .onit-info-area-wrapper {
-        font-size: var(--font-size-small) !important;
-        padding: 0 !important;
-        background-color: transparent !important;
+
+.onit-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--display-insets-xl);
+    margin-top: var(--display-stacks-2xl);
+}
+    .onit-footer img {
+        max-height: var(--max-height-footer-logo);
     }
-        .onit-info-area-wrapper #kc-registration span {
-            display: flex; 
-            align-items: center;
-            gap: var(--display-insets-sm);
-        }
 
 .alert {
     display: flex;
     align-items: center;
     gap: var(--display-stacks-md);
+    margin-bottom: var(--display-insets-2xl);
 }
     .alert > * {
         font-size: var(--font-size-base) !important;

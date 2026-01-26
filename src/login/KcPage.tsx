@@ -6,6 +6,7 @@ import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
 import DefaultPage from "keycloakify/login/DefaultPage";
 import Template from "./Template";
+
 const UserProfileFormFields = lazy(
     () => import("keycloakify/login/UserProfileFormFields")
 );
@@ -42,21 +43,28 @@ export default function KcPage(props: { kcContext: KcContext }) {
 const classes = {
     kcAlertClass: "alert",
     kcBodyClass: "onit-body",
-    kcButtonBlockClass: "w-100",
+    kcButtonBlockClass: "btn-block",
     kcButtonClass: "btn",
     kcButtonLargeClass: "btn-lg",
     kcButtonPrimaryClass: "btn-primary",
-    kcFormCardClass: "onit-form",
+    kcContentWrapperClass: "onit-content-wrapper",
+    kcFormButtonsClass: "onit-form-buttons",
+    kcFormCardClass: "onit-form-card",
+    kcFormClass: "onit-form",
     kcFormGroupClass: "onit-form-group",
     kcFormHeaderClass: "onit-form-header",
+    kcFormOptionsClass: "onit-form-options",
+    kcFormOptionsWrapperClass: "onit-form-options-wrapper",
     kcFormPasswordVisibilityButtonClass: "btn btn-visibility-toggle py-0",
     kcFormSettingClass: "onit-form-settings",
     kcFormSocialAccountListButtonClass: "btn btn-outline-secondary w-100", //hover -> main.css
     kcInfoAreaWrapperClass: "onit-info-area-wrapper",
     kcInputClass: "form-control",
     kcInputErrorMessageClass: "error-message",
+    kcInputWrapperClass: "onit-input-wrapper",
     kcInputGroup: "input-group",
     kcLabelClass: "form-label",
+    kcLabelWrapperClass: "onit-label-wrapper",
     kcLoginClass: "onit-panel",
     kcSignUpClass: "onit-sign-up",
 } satisfies { [key in ClassKey]?: string };

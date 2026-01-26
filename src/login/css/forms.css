@@ -15,21 +15,33 @@ label {
 input[type=checkbox] {
     height: var(--font-size-base);
     width: var(--font-size-base);
-    color: var(--color-border-subtle) !important;
-    border: 1px solid var(--color-border-subtle) !important;
+    color: var(--color-border-subtle);
+    accent-color: var(--color-text-primary);
+    border: 1px solid var(--color-border-subtle);
     border-radius: var(--corner-radius-xs);
 }
 
-/* Forms */
-
-.onit-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.onit-input-wrapper {
+    width: 100%;
 }
 
+.btn-block, 
+.input-group,
+.form-control {
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .btn-block, 
+    .input-group,
+    .form-control {
+        width: 75% !important;
+    }
+}
+
+
 /* Form header */ 
-/* = ".onit-form > .onit-form-header" */
+/* = ".onit-form-card > .onit-form-header" */
 
 .onit-form-header h1 {
     font-size: var(--font-size-heading-1);
@@ -37,31 +49,44 @@ input[type=checkbox] {
     line-height: var(--line-height-heading-1);
 }
 
+.onit-content-wrapper > div:not(.onit-label-wrapper)
+.onit-content-wrapper > div:last-child {
+    padding: 0 !important;
+}
+
+.onit-form-header .onit-label-wrapper,
+.onit-form-header .onit-label-wrapper .required {
+    color: var(--color-text-muted) !important;
+    margin-top: 0;
+}
+    .onit-form-header .onit-label-wrapper 
+
 /* Form groups */
-/* = ".onit-form > div#kc-content > div#kc-content-wrapper > div#form > div#form-wrapper > form > .onit-form-group" */
+/* = ".onit-form-card > div#kc-content > div#kc-content-wrapper > div#form > div#form-wrapper > form > .onit-form-group" */
 
-.onit-form form {
+.onit-form,
+.onit-form-card form {
     display: flex;
     flex-direction: column;
-    gap: var(--display-insets-lg);
+    gap: var(--form-stack-spacing);
 }
 
-.onit-form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: var(--display-insets-sm);
-}
-    /*submit button -> use #kc-login instead?*/
-    /* .onit-form-group:last-child { 
-        margin-top: var(--display-stacks-2xl) !important;
-        margin-bottom: var(--display-stacks-2xl) !important;
-    } */
+    .onit-form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: var(--display-insets-sm);
+    }
 
-    .onit-form-group:has( .error-message) {
+    .error-message {
+        font-size: var(--font-size-small);
+        color: var(--color-text-danger);
+    }
+
+    .onit-form-group:has(* .error-message) {
         color: var(--color-text-danger) !important;
     }
-        .onit-form-group:has( .error-message) input {
+        .onit-form-group:has(* .error-message) input {
             /*color: var(--color-text-danger) !important;*/
             border-color: var(--color-border-danger) !important;
         }
@@ -87,27 +112,64 @@ input[type=checkbox] {
         box-shadow: 0 0 7px var(--color-box-shadow-primary-end);
     }
 
-/* Form settings -> remember me + forgot password */
+/* Form settings */
 /* = ".onit-form-group.onit-form-settings" */
 
-.onit-form-settings {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--display-stacks-md);
-    margin-top: var(--display-stacks-2xl);
+.onit-form-settings { /* contains: remember me */
+    margin-top: var(--display-stacks-lg);
 }
-    .checkbox {
+
+    .onit-form-settings .checkbox {
         margin-bottom: 0;
     }
-        .checkbox label {
-            display: flex;
+        .onit-form-settings .checkbox label {
+            margin-bottom: var(--form-stack-spacing) !important;
+        }
+            .onit-form-settings .checkbox label:has(input[type=checkbox]){
+                padding-left: var(--display-insets-2xl) !important;
+            }
+            .onit-form-settings .checkbox label:has(input#rememberMe) {
+                font-weight: var(--font-weight-medium);
+                color: var(--color-text-base);
+            }
+
+            .onit-form-settings .checkbox label input {
+                margin: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+                .onit-form-settings .checkbox label input[type=checkbox] {
+                    margin-left: var(--display-insets-2xl-negative);
+                }
+
+    .onit-form-settings .onit-form-options-wrapper { /* contains: forgot-password, back-to-login, etc.  */
+    }
+
+/* Sign up */
+
+.onit-sign-up {
+    margin: var(--display-stacks-2xl) 0 0 0 !important;
+}
+    .onit-info-area-wrapper {
+        font-size: var(--font-size-small) !important;
+        padding: 0 !important;
+        background-color: transparent !important;
+    }
+        .onit-info-area-wrapper #kc-registration span {
+            display: flex; 
             align-items: center;
-            gap: var(--display-insets-sm) !important;
-        }
-        .checkbox input {
-            margin: 0;
-            padding-top: 0;
-            padding-bottom: 0;
+            gap: var(--display-insets-sm);
         }
 
+/* Form buttons */
 
+.onit-form-buttons {
+    width: 100%;
+    padding: 0;
+}
+
+/* not always present => only here to minimise impact */
+.onit-label-wrapper, .onit-input-wrapper,
+.onit-form-options {
+    padding: 0;
+}
