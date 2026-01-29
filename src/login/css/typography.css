@@ -15,7 +15,7 @@ a {
         color: var(--color-text-primary-hover) !important;
     }
 
-.btn {
+button, .btn {
     background-image: none;
     box-shadow: none;
     display: flex; 

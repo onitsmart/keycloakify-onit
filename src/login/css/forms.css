@@ -39,6 +39,17 @@ input[type=checkbox] {
     }
 }
 
+/* Page specific -> Register */
+
+@media screen and (min-width: 992px) {
+    .onit-form-card:has(h1 > [data-kc-msg=\"registerTitle\"]) .btn-block,
+    .onit-form-card:has(h1 > [data-kc-msg=\"registerTitle\"]) .input-group,
+    .onit-form-card:has(h1 > [data-kc-msg=\"registerTitle\"]) .form-control {
+        width: 100% !important;
+        /* not working */
+    }
+}
+
 
 /* Form header */ 
 /* = ".onit-form-card > .onit-form-header" */

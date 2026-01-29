@@ -28,6 +28,7 @@ hr {
     min-height: 100vh;
     width: 100%;
     background-color: var(--color-background-subtle);
+    padding-top: var(--display-stacks-2xl);
 }
     .onit-body #root > div {
         min-width: 70%;
@@ -60,7 +61,7 @@ hr {
     justify-content: space-between;
     align-items: center;
     gap: var(--display-insets-xl);
-    margin-top: var(--display-stacks-2xl);
+    padding: var(--display-stacks-2xl) 0;
 }
     .onit-footer img {
         max-height: var(--max-height-footer-logo);

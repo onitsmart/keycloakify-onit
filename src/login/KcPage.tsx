@@ -65,6 +65,10 @@ const classes = {
     kcInputGroup: "input-group",
     kcLabelClass: "form-label",
     kcLabelWrapperClass: "onit-label-wrapper",
+    kcLocaleDropDownClass: "dropdown",
+    kcLocaleItemClass: "dropdown-item",
+    kcLocaleListClass: "dropdown-menu",
+    kcLocaleListItemClass: "",
     kcLoginClass: "onit-panel",
     kcSignUpClass: "onit-sign-up",
 } satisfies { [key in ClassKey]?: string };
