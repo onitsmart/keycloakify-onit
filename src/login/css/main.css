@@ -74,10 +74,17 @@ hr {
     align-items: center; 
     margin-top: var(--display-stacks-2xl);
 }
+    .onit-header-class img {
+        max-width: 200px;
+    }
+
     @media screen and (min-width: 992px) {
         .onit-header-class {
             margin-top: 0;
         }
+            .onit-header-class img {
+                max-width: 100%;
+            }
     }        
 
 .onit-form-card {
