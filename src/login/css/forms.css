@@ -31,25 +31,13 @@ input[type=checkbox] {
     width: 100%;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
     .btn-block, 
     .input-group,
     .form-control {
         width: 75% !important;
     }
 }
-
-/* Page specific -> Register */
-
-@media screen and (min-width: 992px) {
-    .onit-form-card:has(h1 > [data-kc-msg=\"registerTitle\"]) .btn-block,
-    .onit-form-card:has(h1 > [data-kc-msg=\"registerTitle\"]) .input-group,
-    .onit-form-card:has(h1 > [data-kc-msg=\"registerTitle\"]) .form-control {
-        width: 100% !important;
-        /* not working */
-    }
-}
-
 
 /* Form header */ 
 /* = ".onit-form-card > .onit-form-header" */
@@ -58,19 +46,34 @@ input[type=checkbox] {
     font-size: var(--font-size-heading-1);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-heading-1);
+    margin: 0 !important;
 }
 
-.onit-content-wrapper > div:not(.onit-label-wrapper)
-.onit-content-wrapper > div:last-child {
-    padding: 0 !important;
+.onit-content-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
-.onit-form-header .onit-label-wrapper,
-.onit-form-header .onit-label-wrapper .required {
-    color: var(--color-text-muted) !important;
-    margin-top: 0;
-}
-    .onit-form-header .onit-label-wrapper 
+    .onit-content-wrapper > div.col-md-10 {
+        padding: 0 !important;
+    }
+
+    .onit-content-wrapper > div:not(.onit-label-wrapper)
+    .onit-content-wrapper > div:last-child {
+        padding: 0 !important;
+    }
+
+@media screen and (min-width: 992px) {
+    .onit-form-header {
+        padding-top: var(--display-insets-xl);
+    }
+}    
+    .onit-form-header .onit-label-wrapper,
+    .onit-form-header .onit-label-wrapper .required {
+        order: 3;
+        color: var(--color-text-muted) !important;
+        margin-top: 0;
+    }
 
 /* Form groups */
 /* = ".onit-form-card > div#kc-content > div#kc-content-wrapper > div#form > div#form-wrapper > form > .onit-form-group" */
@@ -87,6 +90,7 @@ input[type=checkbox] {
         flex-direction: column;
         align-items: start;
         gap: var(--display-insets-sm);
+        margin-top: 0 !important;
     }
 
     .error-message {
@@ -94,11 +98,10 @@ input[type=checkbox] {
         color: var(--color-text-danger);
     }
 
-    .onit-form-group:has(* .error-message) {
+    .onit-form-group:has(.error-message) {
         color: var(--color-text-danger) !important;
     }
-        .onit-form-group:has(* .error-message) input {
-            /*color: var(--color-text-danger) !important;*/
+        .onit-form-group:has(.error-message) .form-control {
             border-color: var(--color-border-danger) !important;
         }
 
@@ -127,14 +130,16 @@ input[type=checkbox] {
 /* = ".onit-form-group.onit-form-settings" */
 
 .onit-form-settings { /* contains: remember me */
-    margin-top: var(--display-stacks-lg);
+    gap: var(--display-insets-xl) !important;
 }
-
     .onit-form-settings .checkbox {
         margin-bottom: 0;
     }
+        .onit-form-settings .checkbox .radio {
+            margin-bottom: 0 !important;
+        }
         .onit-form-settings .checkbox label {
-            margin-bottom: var(--form-stack-spacing) !important;
+            /* margin-bottom: var(--form-stack-spacing) !important; */
         }
             .onit-form-settings .checkbox label:has(input[type=checkbox]){
                 padding-left: var(--display-insets-2xl) !important;
@@ -155,6 +160,13 @@ input[type=checkbox] {
 
     .onit-form-settings .onit-form-options-wrapper { /* contains: forgot-password, back-to-login, etc.  */
     }
+
+/* Social Accounts Section */
+.onit-social-account-section h2 {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    margin-bottom: var(--display-insets-lg);
+}
 
 /* Sign up */
 

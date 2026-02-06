@@ -5,6 +5,7 @@
     --color-black-opacity-75: rgba(0, 0, 0, 0.75);
     --color-white: #fff;
     --color-gray-100: #F3F4F6;
+    --color-gray-400: #9CA3AF;
     --color-gray-500: #6B7080;
     --color-gray-900: #111827;
     --color-blue-50: #EFF6FF;
@@ -41,6 +42,7 @@
     /* Colors - light: text */
     --color-text-base: var(--color-gray-900);
     --color-text-muted: var(--color-gray-500);
+    --color-text-muted-hover: var(--color-gray-400);
     --color-text-inverse: var(--color-gray-100);
     --color-text-accent: var(--color-midnight-blue-500);
     --color-text-accent-hover: var(--color-midnight-blue-400); /* not used */
@@ -185,8 +187,9 @@
     --form-stack-spacing: var(--display-insets-xl);
 
     /* Paddings */
-    --panel-login-padding-x: var(--spacing-64);
-    --panel-login-padding-y: var(--spacing-64);
+    --panel-login-gap: var(--spacing-32);
+    --panel-login-padding-x: var(--spacing-32);
+    --panel-login-padding-y: var(--spacing-32);
     --input-padding-x: var(--display-insets-md);
     --input-padding-y: var(--display-insets-sm);
     --button-padding-x: var(--display-insets-md);
@@ -197,6 +200,9 @@
 
 @media screen and (min-width: 992px) {
     :root {
-
+        /* Paddings */
+        --panel-login-gap: var(--spacing-64);
+        --panel-login-padding-x: var(--spacing-64);
+        --panel-login-padding-y: var(--spacing-32);
     }
 }

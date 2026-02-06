@@ -12,6 +12,12 @@ hr {
     margin-bottom: 1.75rem !important;
 }
 
+@media screen and (min-width: 1200px) {
+    .w-xl-75 {
+        width: 75% !important;
+    }
+}
+
 .onit-body #storybook-root { /* only in DEV */
     justify-self: center;
     display: flex;
@@ -21,25 +27,34 @@ hr {
     padding-top: var(--display-stacks-2xl);
 }
 
+.onit-body {
+    background: var(--color-background-subtle) !important;
+}
+
 .onit-body #root {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     width: 100%;
-    background-color: var(--color-background-subtle);
     padding-top: var(--display-stacks-2xl);
 }
     .onit-body #root > div {
-        min-width: 70%;
+        min-width: 90%;
+        max-width: 95%;
     }
+        @media screen and (min-width: 992px) {
+            .onit-body #root > div {
+                min-width: 70%;
+            }
+        }
 
 .onit-panel {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 20%;
+    gap: var(--panel-login-gap);
     height: fit-content;
     min-width: 50%; 
     border-radius: var(--corner-radius-panel-login);
@@ -47,13 +62,87 @@ hr {
     padding: var(--panel-login-padding-y) var(--panel-login-padding-x);
     margin-bottom: 0;
 }
+    @media screen and (min-width: 992px) {
+        .onit-panel {
+            flex-direction: row;
+        }
+    }
+
+.onit-header-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: var(--display-stacks-2xl);
+}
+    @media screen and (min-width: 992px) {
+        .onit-header-class {
+            margin-top: 0;
+        }
+    }        
 
 .onit-form-card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-width: 50%;
+    min-width: 70%;
 }
+    @media screen and (min-width: 1400px) {
+        .onit-form-card {
+            min-width: 60%;
+        }
+    }
+
+    /* Page specific -> Register */
+    @media screen and (min-width: 1200px) {
+        .onit-form-card:has(h1 > [data-kc-msg=\"registerTitle\"]) .btn-block,
+        .onit-form-card:has(h1 > [data-kc-msg=\"registerTitle\"]) .input-group,
+        .onit-form-card:has(h1 > [data-kc-msg=\"registerTitle\"]) .form-control {
+            width: 100% !important;
+            /* not working */
+        }
+    }
+
+    .onit-locale {
+        position: absolute !important;
+        top: var(--display-insets-xl) !important;
+        right: var(--display-insets-xl) !important;
+        text-align: right !important;
+    }
+        @media screen and (min-width: 576px) {
+            .onit-locale {
+                right: var(--display-insets-xl) !important;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .onit-locale {
+                /* sovrascrivi codice automatico */
+                right: var(--panel-login-padding-y) !important;
+            }
+        }
+
+        .onit-locale-dropdown > button {
+            font-size: var(--font-size-small) !important;
+            color: var(--color-text-muted) !important;
+        }
+            .onit-locale-dropdown > button:hover, .onit-locale-dropdown > button.hover,
+            .onit-locale-dropdown > button:focus, .onit-locale-dropdown > button.focus {
+                color: var(--color-text-muted-hover);
+            }
+
+        .onit-locale-dropdown .dropdown-menu {
+            width: fit-content;
+        }
+            .onit-locale-dropdown .dropdown-item {
+                font-size: var(--font-size-small) !important;
+                text-align: start !important;
+                color: var(--color-text-muted) !important;
+                padding: var(--display-insets-xs) var(--display-insets-sm);
+            }
+                .onit-locale-dropdown .dropdown-item:hover, .onit-locale-dropdown .dropdown-item.hover,
+                .onit-locale-dropdown .dropdown-item:focus, .onit-locale-dropdown .dropdown-item.focus {
+                    background-color: var(--color-background-subtle) !important;
+                    border-color: var(--color-border-subtle) !important;
+                }
 
 .onit-footer {
     display: flex;

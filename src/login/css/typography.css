@@ -26,6 +26,10 @@ button, .btn {
     border-radius: var(--corner-radius-xs);
     padding: var(--button-padding-y) var(--button-padding-x);
 }
+    button *, .btn * {
+        position: static; 
+    }
+
     .btn-lg {
         font-weight: var(--font-weight-semibold);
         border-radius: var(--corner-radius-sm);
@@ -47,6 +51,9 @@ button, .btn {
             border-color: var(--color-border-primary-disabled) !important;
             background-color: var(--color-background-primary-disabled) !important;
         }
+            .btn-primary:disabled i, .btn-primary.disabled i {
+                color: var(--color-white) !important;
+            }
 
     .btn-visibility-toggle {
         border: 1px solid var(--color-border-subtle);
@@ -60,3 +67,7 @@ button, .btn {
 .btn-outline-secondary:focus, .btn-outline-secondary.focus  {
     color: var(--color-text-inverse) !important;
 }
+    .btn-outline-secondary:hover i, .btn-outline-secondary.hover i,
+    .btn-outline-secondary:focus i, .btn-outline-secondary.focus i {
+        color: var(--color-text-inverse) !important;
+    }
