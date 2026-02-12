@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/onit-theme.css";
+import "./css/onit-support-theme.css";
 import "./css/main.css";
 import { Suspense, lazy } from "react";
 import type { ClassKey } from "keycloakify/login";
@@ -17,6 +19,51 @@ export default function KcPage(props: { kcContext: KcContext }) {
     const { kcContext } = props;
 
     const { i18n } = useI18n({ kcContext });
+
+    const realmDependentBodyClass = kcContext.realm.displayName == "onit-support-custom"
+        ? "onit-support-theme"
+        : "onit-theme";
+
+    const classes = {
+        kcAlertClass: "alert",
+        kcBodyClass: "onit-body" + " "  + realmDependentBodyClass,
+        kcButtonBlockClass: "btn-block",
+        kcButtonClass: "btn",
+        kcButtonLargeClass: "btn-lg",
+        kcButtonPrimaryClass: "btn-primary",
+        kcCommonLogoIdP: "",
+        kcContentWrapperClass: "onit-content-wrapper",
+        kcFormButtonsClass: "onit-form-buttons",
+        kcFormCardClass: "onit-form-card",
+        kcFormClass: "onit-form",
+        kcFormGroupClass: "onit-form-group",
+        kcFormHeaderClass: "onit-form-header",
+        kcFormOptionsClass: "onit-form-options",
+        kcFormOptionsWrapperClass: "onit-form-options-wrapper",
+        kcFormPasswordVisibilityButtonClass: "btn btn-visibility-toggle py-0",
+        kcFormSettingClass: "onit-form-settings",
+        kcFormSocialAccountListButtonClass: "btn btn-outline-primary btn-social-account w-100", //hover -> main.css
+        kcFormSocialAccountListClass: "d-flex flex-column gap-1 gap-lg-2 ps-0",
+        kcFormSocialAccountNameClass: "",
+        kcFormSocialAccountSectionClass: "onit-social-account-section text-lg-start",
+        kcHeaderClass: "onit-header-class w-100",
+        kcHeaderWrapperClass: "p-0",
+        kcInfoAreaWrapperClass: "onit-info-area-wrapper",
+        kcInputClass: "form-control",
+        kcInputErrorMessageClass: "error-message",
+        kcInputWrapperClass: "onit-input-wrapper",
+        kcInputGroup: "input-group",
+        kcLabelClass: "form-label",
+        kcLabelWrapperClass: "onit-label-wrapper",
+        kcLocaleDropDownClass: "onit-locale-dropdown dropdown",
+        kcLocaleItemClass: "dropdown-item",
+        kcLocaleListClass: "dropdown-menu dropdown-menu-end",
+        kcLocaleListItemClass: "",
+        kcLocaleMainClass: "onit-locale",
+        kcLocaleWrapperClass: "",
+        kcLoginClass: "onit-panel",
+        kcSignUpClass: "onit-sign-up",
+    } satisfies { [key in ClassKey]?: string };
 
     return (
         <Suspense>
@@ -40,43 +87,4 @@ export default function KcPage(props: { kcContext: KcContext }) {
     );
 }
 
-const classes = {
-    kcAlertClass: "alert",
-    kcBodyClass: "onit-body",
-    kcButtonBlockClass: "btn-block",
-    kcButtonClass: "btn",
-    kcButtonLargeClass: "btn-lg",
-    kcButtonPrimaryClass: "btn-primary",
-    kcCommonLogoIdP: "",
-    kcContentWrapperClass: "onit-content-wrapper",
-    kcFormButtonsClass: "onit-form-buttons",
-    kcFormCardClass: "onit-form-card",
-    kcFormClass: "onit-form",
-    kcFormGroupClass: "onit-form-group",
-    kcFormHeaderClass: "onit-form-header",
-    kcFormOptionsClass: "onit-form-options",
-    kcFormOptionsWrapperClass: "onit-form-options-wrapper",
-    kcFormPasswordVisibilityButtonClass: "btn btn-visibility-toggle py-0",
-    kcFormSettingClass: "onit-form-settings",
-    kcFormSocialAccountListButtonClass: "btn btn-outline-secondary w-100 w-xl-75", //hover -> main.css
-    kcFormSocialAccountListClass: "d-flex flex-column gap-1 gap-lg-2 ps-0",
-    kcFormSocialAccountNameClass: "",
-    kcFormSocialAccountSectionClass: "onit-social-account-section text-lg-start",
-    kcHeaderClass: "onit-header-class w-100",
-    kcHeaderWrapperClass: "p-0",
-    kcInfoAreaWrapperClass: "onit-info-area-wrapper",
-    kcInputClass: "form-control",
-    kcInputErrorMessageClass: "error-message",
-    kcInputWrapperClass: "onit-input-wrapper",
-    kcInputGroup: "input-group",
-    kcLabelClass: "form-label",
-    kcLabelWrapperClass: "onit-label-wrapper",
-    kcLocaleDropDownClass: "onit-locale-dropdown dropdown",
-    kcLocaleItemClass: "dropdown-item",
-    kcLocaleListClass: "dropdown-menu dropdown-menu-end",
-    kcLocaleListItemClass: "",
-    kcLocaleMainClass: "onit-locale",
-    kcLocaleWrapperClass: "",
-    kcLoginClass: "onit-panel",
-    kcSignUpClass: "onit-sign-up",
-} satisfies { [key in ClassKey]?: string };
+

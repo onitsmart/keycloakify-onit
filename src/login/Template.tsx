@@ -1,7 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/onit-theme.css";
+import "./css/onit-support-theme.css";
 import "./css/main.css";
-import logoIpsumUrl from "./assets/logo-ipsum.svg";
-import logoOnitUrl from "./assets/logo-onit.svg";
+import logoOnitUrl from "./assets/onit-logo.svg";
+import logoOnitSupportUrl from "./assets/onit-support-logo.svg";
+import logoCompanyUrl from "./assets/company-logo.svg";
 import { useEffect } from "react";
 import { clsx } from "keycloakify/tools/clsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
@@ -55,13 +58,17 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         return null;
     }
 
+    const currentLogoUrl = kcContext.realm.displayName == "onit-support-custom"
+        ? logoOnitSupportUrl
+        : logoCompanyUrl;
+
     return (
-        <div>
+        <div className="main-container">
             <div className={kcClsx("kcLoginClass")}>
                 <div id="kc-header" className={kcClsx("kcHeaderClass")}>
                     <div id="kc-header-wrapper" className={kcClsx("kcHeaderWrapperClass")}>
                         {/* {msg("loginTitleHtml", realm.displayNameHtml)} */}
-                        <img src={logoIpsumUrl} alt="Logo" />
+                        <img src={currentLogoUrl} alt="Logo" />
                     </div>
                 </div>
                 <div className={kcClsx("kcFormCardClass")}>

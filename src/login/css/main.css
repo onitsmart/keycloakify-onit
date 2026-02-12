@@ -12,41 +12,34 @@ hr {
     margin-bottom: 1.75rem !important;
 }
 
-@media screen and (min-width: 1200px) {
-    .w-xl-75 {
-        width: 75% !important;
-    }
-}
-
-.onit-body #storybook-root { /* only in DEV */
+.onit-body #storybook-root, /* only in DEV */
+.onit-body #root { 
     justify-self: center;
     display: flex;
     justify-content: center;
-    height: fit-content;
-    min-width: 90%;
-    padding-top: var(--display-stacks-2xl);
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .onit-body #storybook-root, /* only in DEV */
+    .onit-body #root {
+        min-width: 800px;
+    }
 }
 
 .onit-body {
     background: var(--color-background-subtle) !important;
 }
 
-.onit-body #root {
+.main-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 32px;
     width: 100%;
-    padding-top: var(--display-stacks-2xl);
 }
-    .onit-body #root > div {
-        min-width: 90%;
-        max-width: 95%;
-    }
-        @media screen and (min-width: 992px) {
-            .onit-body #root > div {
-                min-width: 70%;
-            }
-        }
 
 .onit-panel {
     position: relative;
@@ -55,9 +48,10 @@ hr {
     justify-content: space-between;
     align-items: center;
     gap: var(--panel-login-gap);
-    height: fit-content;
-    min-width: 50%; 
-    border-radius: var(--corner-radius-panel-login);
+    height: fit-content; 
+    width: 100%;
+    max-width: 1024px;
+    border: 1px solid var(--color-border-panel);
     background-color: var(--color-background-default);
     padding: var(--panel-login-padding-y) var(--panel-login-padding-x);
     margin-bottom: 0;
@@ -65,6 +59,7 @@ hr {
     @media screen and (min-width: 992px) {
         .onit-panel {
             flex-direction: row;
+            border-radius: var(--corner-radius-panel-login);
         }
     }
 
@@ -91,11 +86,11 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-width: 70%;
+    width: 100%;
 }
-    @media screen and (min-width: 1400px) {
+    @media screen and (min-width: 572px) and (max-width: 991px) {
         .onit-form-card {
-            min-width: 60%;
+            width: 75%;
         }
     }
 
@@ -157,7 +152,6 @@ hr {
     justify-content: space-between;
     align-items: center;
     gap: var(--display-insets-xl);
-    padding: var(--display-stacks-2xl) 0;
 }
     .onit-footer img {
         max-height: var(--max-height-footer-logo);

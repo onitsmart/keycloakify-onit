@@ -1,0 +1,23 @@
+.onit-theme {
+    
+    /* Primitives: colors */
+    --color-midnight-blue-300: #4485b5; /* still too low contrast (if the text is not bold) but at least it's just in hover */
+    /* --color-midnight-blue-400: #3488C8; //contrast too low for coloured text on white bg: 3.81 */
+    --color-midnight-blue-400: #2F77AC;
+    --color-midnight-blue-500: #1566A2;
+
+    /* Colors - light: text */
+    --color-text-primary: var(--color-midnight-blue-500);
+    --color-text-primary-hover: var(--color-midnight-blue-300);
+
+    /* Colors - light: border */
+    --color-border-primary: var(--color-midnight-blue-500);
+    --color-border-primary-hover: var(--color-midnight-blue-300);
+    --color-border-primary-disabled: var(--color-midnight-blue-400);
+    --color-border-panel: transparent;
+
+    /* Colors - light: background */
+    --color-background-primary: var(--color-midnight-blue-500);
+    --color-background-primary-hover: var(--color-midnight-blue-300); 
+    --color-background-primary-disabled: var(--color-midnight-blue-400);
+}

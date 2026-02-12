@@ -1,0 +1,24 @@
+.onit-support-theme {
+    
+    /* Primitives: colors */
+    --color-violet-300: #C4B5FD;
+    --color-violet-400: #A78BFA;
+    --color-violet-500: #8B5CF6;
+    --color-violet-600: #7C3AED;
+    --color-violet-700: #6D28D9;
+
+    /* Colors - light: text */
+    --color-text-primary: var(--color-violet-700);
+    --color-text-primary-hover: var(--color-violet-500);
+
+    /* Colors - light: border */
+    --color-border-primary: var(--color-violet-700);
+    --color-border-primary-hover: var(--color-violet-600);
+    --color-border-primary-disabled: var(--color-violet-300);
+    --color-border-panel: var(--color-border-primary);
+
+    /* Colors - light: background */
+    --color-background-primary: var(--color-violet-700);
+    --color-background-primary-hover: var(--color-violet-600); 
+    --color-background-primary-disabled: var(--color-violet-400);
+}

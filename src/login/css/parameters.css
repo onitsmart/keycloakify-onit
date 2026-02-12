@@ -17,8 +17,6 @@
     --color-green-500: #22C55E;
     --color-green-600: #16A34A;
     --color-green-700: #15803D;
-    --color-midnight-blue-400: #3488C8;
-    --color-midnight-blue-500: #1566A2;
     --color-red-50: #FEF2F2;
     --color-red-100: #FEE2E2;
     --color-red-400: #F87171;
@@ -30,12 +28,6 @@
     --color-yellow-500: #EAB308;
     --color-yellow-600: #CA8A04;
     --color-yellow-700: #A16207;
-    --color-violet-300: #C4B5FD;
-    --color-violet-400: #A78BFA;
-    --color-violet-500: #8B5CF6;
-    --color-violet-600: #7C3AED;
-    --color-violet-700: #6D28D9;
-    --color-violet-700-opacity-60: rgba(109, 40, 217, 0.6);
     --color-zinc-100: #F4F4F5;
     --color-zinc-200: #E4E4E7;
 
@@ -46,8 +38,6 @@
     --color-text-inverse: var(--color-gray-100);
     --color-text-accent: var(--color-midnight-blue-500);
     --color-text-accent-hover: var(--color-midnight-blue-400); /* not used */
-    --color-text-primary: var(--color-violet-700);
-    --color-text-primary-hover: var(--color-violet-500);
     --color-text-info: var(--color-blue-600);
     --color-text-success: var(--color-green-600);
     --color-text-warning: var(--color-yellow-700);
@@ -56,9 +46,6 @@
 
     /* Colors - light: border */
     --color-border-subtle: var(--color-zinc-200);
-    --color-border-primary: var(--color-violet-700);
-    --color-border-primary-hover: var(--color-violet-600);
-    --color-border-primary-disabled: var(--color-violet-300);
     --color-border-info: var(--color-blue-600);
     --color-border-success: var(--color-green-600);
     --color-border-warning: var(--color-yellow-600);
@@ -71,9 +58,6 @@
     /* Colors - light: background */
     --color-background-default: var(--color-white);
     --color-background-subtle: var(--color-zinc-100);
-    --color-background-primary: var(--color-violet-700);
-    --color-background-primary-hover: var(--color-violet-600); 
-    --color-background-primary-disabled: var(--color-violet-400);
     --color-background-info: var(--color-blue-600);
     --color-background-info-hover: var(--color-blue-500);
     --color-background-info-outline: var(--color-blue-100);
@@ -92,8 +76,6 @@
     --color-background-danger-outline-hover: var(--color-red-50);
 
     /* Colors - dark */
-
-    /* -bs vars? -> use inspector (eg: btn-primary) */
 }
 
 /* Typography */
@@ -116,6 +98,7 @@
 
     /* Font family */
     --font-family-base: "Inter", sans-serif;
+    --font-family-icons: "FontAwesome";
 
     /* Font weights */
     --font-weight-light: 300;
