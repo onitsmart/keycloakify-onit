@@ -2,9 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/onit-theme.css";
 import "./css/onit-support-theme.css";
 import "./css/main.css";
+import logoOnitSharedUrl from "./assets/onit-logo-small.svg";
 import logoOnitUrl from "./assets/onit-logo.svg";
 import logoOnitSupportUrl from "./assets/onit-support-logo.svg";
-import logoCompanyUrl from "./assets/company-logo.svg";
 import { useEffect } from "react";
 import { clsx } from "keycloakify/tools/clsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
@@ -58,9 +58,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         return null;
     }
 
-    const currentLogoUrl = kcContext.realm.displayName == "onit-support-custom"
+    const currentLogoUrl = kcContext.themeName.includes("onit-support") 
         ? logoOnitSupportUrl
-        : logoCompanyUrl;
+        : logoOnitUrl;
 
     return (
         <div className="main-container">
@@ -195,7 +195,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 </div>
             </div>
             <div className="onit-footer">
-                <img src={logoOnitUrl} alt="Logo Onit" className="img-fluid" />
+                <img src={logoOnitSharedUrl} alt="Logo Onit" className="img-fluid" />
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ export default defineConfig({
         react(),
         keycloakify({
             accountThemeImplementation: "none",
-            themeName: [ "onit-custom", "onit-support-custom" ]
+            themeName: [ "onit", "onit-support" ]
         })
     ]
 });
