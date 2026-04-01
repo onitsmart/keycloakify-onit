@@ -20,7 +20,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
 
     const { i18n } = useI18n({ kcContext });
 
-    const realmDependentBodyClass = kcContext.realm.displayName == "onit-support-custom"
+    const realmDependentBodyClass = kcContext.themeName.includes("onit-support") 
         ? "onit-support-theme"
         : "onit-theme";
 
