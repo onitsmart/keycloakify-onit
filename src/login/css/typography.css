@@ -1,6 +1,11 @@
 @import "./fonts.css";
 @import "./parameters.css";
 
+.text-small {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+}
+
 a {
     color: var(--color-text-primary);
     font-weight: var(--font-weight-regular);

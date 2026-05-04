@@ -2,9 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/onit-theme.css";
 import "./css/onit-support-theme.css";
 import "./css/main.css";
-import logoOnitSharedUrl from "./assets/onit-logo-small.svg";
+// import logoOnitSharedUrl from "./assets/onit-logo-small.svg";
 import logoOnitUrl from "./assets/onit-logo.svg";
 import logoOnitSupportUrl from "./assets/onit-support-logo.svg";
+import logoOnitOperationsUrl from "./assets/onit-operations-logo.svg";
 import { useEffect } from "react";
 import { clsx } from "keycloakify/tools/clsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
@@ -58,9 +59,22 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
         return null;
     }
 
-    const currentLogoUrl = kcContext.themeName.includes("onit-support") 
-        ? logoOnitSupportUrl
-        : logoOnitUrl;
+    var currentLogoUrl : string;
+
+    switch (kcContext.themeName) {
+        case "onit-support":
+            currentLogoUrl = logoOnitSupportUrl;
+            break;
+
+        case "onit-operations": 
+            currentLogoUrl = logoOnitOperationsUrl;
+            break;
+
+        case "onit":
+        default:
+            currentLogoUrl = logoOnitUrl;
+            break;
+    }
 
     return (
         <div className="main-container">
@@ -195,7 +209,22 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 </div>
             </div>
             <div className="onit-footer">
-                <img src={logoOnitSharedUrl} alt="Logo Onit" className="img-fluid" />
+                {/* <a href="https://onit.it/" target="_blank" aria-label="Onit website">
+                    <img src={logoOnitSharedUrl} alt="Logo Onit" className="img-fluid" />
+                </a> */}
+                <address className="mb-0">
+                    <p className="text-center mb-0">
+                        Onit Operations S.r.l. <br />
+                        Via dell'Arrigoni, 198 • 47522 Cesena (FC) IT <br />
+                        Partita IVA 04808840401
+                    </p>
+                </address>
+                <div className="d-flex align-items-center justify-content-center flex-wrap gap-2 text-small">
+                    {kcContext.themeName.includes("onit-operations") && (
+                        <a href="mailto:assistenza@onit.com" target="_blank" className="px-2">Contatta il supporto</a>
+                    )}
+                    <a href="https://onit.it/it/legal/informativa-privacy" target="_blank" className="px-2">Privacy &amp; cookie policy</a>
+                </div>
             </div>
         </div>
     );

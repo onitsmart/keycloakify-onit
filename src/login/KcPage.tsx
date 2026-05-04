@@ -20,9 +20,19 @@ export default function KcPage(props: { kcContext: KcContext }) {
 
     const { i18n } = useI18n({ kcContext });
 
-    const realmDependentBodyClass = kcContext.themeName.includes("onit-support") 
-        ? "onit-support-theme"
-        : "onit-theme";
+    var realmDependentBodyClass: string;
+
+    switch (kcContext.themeName) {
+        case "onit-support":
+            realmDependentBodyClass = "onit-support-theme";
+            break;
+        
+        case "onit-operations":
+        case "onit":    
+        default:
+            realmDependentBodyClass = "onit-theme";
+            break;
+    }
 
     const classes = {
         kcAlertClass: "alert",

@@ -109,12 +109,14 @@
     --font-weight-black: 900;
 
     /* Font sizes */
+    --font-size-extra-small: var(--size-12px);
     --font-size-small: var(--size-14px);
     --font-size-base: var(--size-16px);
     --font-size-large: var(--size-18px);
     --font-size-heading-1: var(--size-28px);
 
     /* Line-heights */
+    --line-height-extra-small: var(--size-16px);
     --line-height-small: var(--size-20px);
     --line-height-base: var(--size-24px);
     --line-height-large: var(--size-32px);

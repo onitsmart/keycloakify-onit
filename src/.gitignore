@@ -2,7 +2,9 @@
 
 # === Owned files start ===
 # email/html/email-test.ftl
+# email/html/password-reset.ftl
 # email/html/template.ftl
+# email/messages/messages_it.properties
 # === Owned files end =====
 
 # === @keycloakify/email-native v260007.0.0 ===
@@ -21,7 +23,6 @@
 /email/html/executeActions.ftl
 /email/html/identity-provider-link.ftl
 /email/html/org-invite.ftl
-/email/html/password-reset.ftl
 /email/messages/messages_ar.properties
 /email/messages/messages_ca.properties
 /email/messages/messages_cs.properties
@@ -34,7 +35,6 @@
 /email/messages/messages_fi.properties
 /email/messages/messages_fr.properties
 /email/messages/messages_hu.properties
-/email/messages/messages_it.properties
 /email/messages/messages_ja.properties
 /email/messages/messages_ka.properties
 /email/messages/messages_lt.properties

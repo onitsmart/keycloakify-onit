@@ -18,12 +18,13 @@
     "license": "MIT",
     "keywords": [],
     "dependencies": {
+        "@keycloakify/email-native": "~260007.0.0",
         "bootstrap": "^5.3.8",
+        "jsx-email": "^2.8.4",
         "keycloakify": "^11.9.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "yarn": "^1.22.22",
-        "@keycloakify/email-native": "~260007.0.0"
+        "yarn": "^1.22.22"
     },
     "devDependencies": {
         "@eslint/js": "^9.15.0",
@@ -41,6 +42,7 @@
         "eslint-plugin-react-refresh": "^0.4.14",
         "eslint-plugin-storybook": "^0.11.1",
         "globals": "^15.12.0",
+        "keycloakify-emails": "^3.3.1",
         "prettier": "3.3.1",
         "storybook": "^8.1.10",
         "typescript": "^5.2.2",
