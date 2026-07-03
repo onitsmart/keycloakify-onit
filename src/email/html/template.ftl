@@ -147,9 +147,15 @@
                   style="font-family: Helvetica, sans-serif; vertical-align: top; color: #9a9ea6; font-size: 16px; text-align: center;"
                   valign="top" align="center">
                   <span class="apple-link" style="color: #9a9ea6; font-size: 12px; text-align: center;">
-                    Onit Operations S.r.l. <br />
-                    Via dell'Arrigoni, 198 • 47522 Cesena (FC) IT <br />
-                    Partita IVA 04808840401
+                    <#if (kcContext.themeName!"")?lower_case?contains("ope")>
+                      Ope Support S.r.l. <br />
+                      Via dell'Arrigoni, 198 • 47522 Cesena (FC) IT <br />
+                      Partita IVA 04808840401
+                    <#else>
+                      Onit S.p.A. <br />
+                      Via dell'Arrigoni, 308 • 47522 Cesena (FC) IT <br />
+                      Partita IVA 03240560403
+                    </#if>
                   </span>
                   <br/><br/>
                   <span>

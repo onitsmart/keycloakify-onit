@@ -1,11 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/onit-theme.css";
-import "./css/onit-support-theme.css";
+import "./css/ope-support-theme.css";
 import "./css/main.css";
 // import logoOnitSharedUrl from "./assets/onit-logo-small.svg";
 import logoOnitUrl from "./assets/onit-logo.svg";
-import logoOnitSupportUrl from "./assets/onit-support-logo.svg";
-import logoOnitOperationsUrl from "./assets/onit-operations-logo.svg";
+import logoOpeSupportUrl from "./assets/ope-support-logo.svg";
+import logoOpeUrl from "./assets/ope-logo.svg";
 import { useEffect } from "react";
 import { clsx } from "keycloakify/tools/clsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
@@ -61,17 +61,17 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     var currentLogoUrl : string;
 
-    switch (kcContext.themeName) {
-        case "onit-support":
-            currentLogoUrl = logoOnitSupportUrl;
+    switch (kcContext.themeName.toLowerCase()) {
+        case "ope-support":
+            currentLogoUrl = logoOpeSupportUrl;
             break;
 
-        case "onit-operations": 
-            currentLogoUrl = logoOnitOperationsUrl;
+        case "ope": 
+            currentLogoUrl = logoOpeUrl;
             break;
 
         case "onit":
-        case "onit--provider-only":
+        case "onit--providers-only":
         default:
             currentLogoUrl = logoOnitUrl;
             break;
@@ -214,17 +214,37 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     <img src={logoOnitSharedUrl} alt="Logo Onit" className="img-fluid" />
                 </a> */}
                 <address className="mb-0">
-                    <p className="text-center mb-0">
-                        Onit Operations S.r.l. <br />
-                        Via dell'Arrigoni, 198 • 47522 Cesena (FC) IT <br />
-                        Partita IVA 04808840401
-                    </p>
+                    {(() => {
+                        if (kcContext.themeName.toLowerCase().includes("ope")) {
+                            return (
+                                <p className="text-center mb-0">
+                                    Onit Operations S.r.l. <br />
+                                    Via dell'Arrigoni, 198 • 47522 Cesena (FC) IT <br />
+                                    Partita IVA 04808840401
+                                </p>
+                            );
+                        }   
+                        else { 
+                            //onit 
+                            return (
+                                <p className="text-center mb-0">
+                                    Onit S.p.A. <br />
+                                    Via dell'Arrigoni, 308 • 47522 Cesena (FC) IT <br />
+                                    Partita IVA 03240560403
+                                </p>
+                            );
+                        }
+                    })()}
                 </address>
                 <div className="d-flex align-items-center justify-content-center flex-wrap gap-2 text-small">
-                    {kcContext.themeName.includes("onit-operations") && (
-                        <a href="mailto:assistenza@onit.com" target="_blank" className="px-2">Contatta il supporto</a>
-                    )}
-                    <a href="https://onit.it/it/legal/informativa-privacy" target="_blank" className="px-2">Privacy &amp; cookie policy</a>
+                    {(() => {
+                        if (kcContext.themeName.toLowerCase().includes("ope")) {
+                            return (
+                                <a href="mailto:assistenza@onit.com" target="_blank" rel="noopener noreferrer" className="px-2">Contatta il supporto</a>
+                            );
+                        }
+                    })()}
+                    <a href="https://onit.it/it/legal/informativa-privacy" target="_blank" rel="noopener noreferrer" className="px-2">Privacy &amp; cookie policy</a>
                 </div>
             </div>
         </div>

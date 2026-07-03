@@ -11,9 +11,9 @@ export default defineConfig({
         react(),
         keycloakify({
             accountThemeImplementation: "none",
-            themeName: [ "onit", "onit--provider-only", "onit-support", "onit-operations" ],
+            themeName: [ "onit", "onit--providers-only", "ope-support", "ope" ],
             postBuild: async (buildContext) => {
-                const emailThemeNames = buildContext.themeNames.filter((x) => x !== "onit--provider-only");
+                const emailThemeNames = buildContext.themeNames.filter((x) => !x.includes("--providers-only"));
 
                 await buildEmailTheme({
                     assetsDirPath: path.join(

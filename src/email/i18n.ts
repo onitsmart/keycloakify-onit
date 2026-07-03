@@ -1,8 +1,8 @@
 import { GetMessages } from "keycloakify-emails";
 import { _logos, _messagesShared } from "./translations/shared";
 import { _messagesOnit } from "./translations/onit";
-import { _messagesOnitSupport } from "./translations/onit-support";
-import { _messagesOnitOperations } from "./translations/onit-operations";
+import { _messagesOpeSupport } from "./translations/ope-support";
+import { _messagesOpe } from "./translations/ope";
 
 export const formatMessage = (
     template: string,
@@ -30,13 +30,13 @@ export const getMessages: GetMessages = (props) => {
                     messages[key] = value;
                 });
                 break;
-            case "onit-support":
-                Object.entries(_messagesOnitSupport["it"]).forEach(([key, value]) => {
+            case "ope-support":
+                Object.entries(_messagesOpeSupport["it"]).forEach(([key, value]) => {
                     messages[key] = value;
                 });
                 break;
-            case "onit-operations":
-                Object.entries(_messagesOnitOperations["it"]).forEach(([key, value]) => {
+            case "ope":
+                Object.entries(_messagesOpe["it"]).forEach(([key, value]) => {
                     messages[key] = value;
                 });
                 break;      
@@ -54,13 +54,13 @@ export const getMessages: GetMessages = (props) => {
                     messages[key] = value;
                 });
                 break;
-            case "onit-support":
-                Object.entries(_messagesOnitSupport["en"]).forEach(([key, value]) => {
+            case "ope-support":
+                Object.entries(_messagesOpeSupport["en"]).forEach(([key, value]) => {
                     messages[key] = value;
                 });
                 break;
-            case "onit-operations":
-                Object.entries(_messagesOnitOperations["en"]).forEach(([key, value]) => {
+            case "ope":
+                Object.entries(_messagesOpe["en"]).forEach(([key, value]) => {
                     messages[key] = value;
                 });
                 break;      

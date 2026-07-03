@@ -1,7 +1,7 @@
 const _logos: Record<string, string> = {
     "onit": "onit-logo.png",
-    "onit-support": "onit-support-logo.png",
-    "onit-operations": "onit-operations-logo.png"
+    "ope-support": "ope-support-logo.png",
+    "ope": "ope-logo.png"
 };
 
 const _messagesShared: Record<string, Record<string, string>> = {
