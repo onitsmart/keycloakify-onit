@@ -1,35 +1,33 @@
 import { GetSubject, GetTemplate, GetTemplateProps  } from "keycloakify-emails";
-// import { createVariablesHelper } from "keycloakify-emails/variables";
-import { EmailLayout } from "../layout";
+import { createVariablesHelper } from "keycloakify-emails/variables";
 import { render, Raw, Container } from "jsx-email";
-import { getMessages, formatMessage } from "../i18n";
+import { EmailLayout } from "../layout";
+import { formatMessage, getMessages } from "../i18n";
 
 interface TemplateProps extends Omit<GetTemplateProps, "plainText"> {}
-
-export const templateName = "Email Test";
-
-// const { exp } = createVariablesHelper("email-test.ftl");
 
 export const previewProps: TemplateProps = {
   locale: "it",
   themeName: "onit",
 };
 
+export const templateName = "Event User Disabled by Permanent Lockout";
+
+const { exp } = createVariablesHelper("event-user_disabled_by_permanent_lockout.ftl");
+
 export const Template = ({ locale, themeName } : TemplateProps) => {
   const messages = getMessages({ locale, themeName });
   return (
-    <EmailLayout locale={locale} emailSubject={messages["emailTestSubject"]} themeName={themeName}>
-        <Container>
-          <Raw content={messages["emailTestBodyHtml"]} />
-          <Raw content={formatMessage(
-            "This is {0} from {1} theme.",
-            "John Doe",
-            themeName
-          )} />
-        </Container>
+    <EmailLayout locale={locale} emailSubject={messages["eventUserDisabledByPermanentLockoutSubject"]} themeName={themeName}>
+      <Container>
+        <Raw content={formatMessage(
+            messages["eventUserDisabledByPermanentLockoutBodyHtml"],
+            exp("event.date")
+        )} />
+      </Container>
     </EmailLayout>
   );
-}          
+};
 
 export const getTemplate: GetTemplate = async (props) => {
   return await render(<Template {...props} />, { plainText: props.plainText });
@@ -37,5 +35,5 @@ export const getTemplate: GetTemplate = async (props) => {
 
 export const getSubject: GetSubject = async (props) => {
   const messages = getMessages({ locale: props.locale, themeName: props.themeName });
-  return messages["emailTestSubject"];
+  return messages["eventUserDisabledByPermanentLockoutSubject"];
 };

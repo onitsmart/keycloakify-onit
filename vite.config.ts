@@ -13,17 +13,22 @@ export default defineConfig({
             themeName: [ "onit", "onit-support", "onit-operations" ],
             postBuild: async (buildContext) => {
                 await buildEmailTheme({
-                    templatesSrcDirPath: path.join(
-                    buildContext.themeSrcDirPath,
-                    "email",
-                    "templates",
+                    assetsDirPath: path.join(
+                        buildContext.themeSrcDirPath,
+                        "email",
+                        "templates",
+                        "assets"
                     ),
-                    // assetsDirPath: path.join(
-                    //     buildContext.themeSrcDirPath,
-                    //     "email",
-                    //     "templates",
-                    //     "assets"
-                    // ),
+                    i18nSourceFile: path.join(
+                        buildContext.themeSrcDirPath,
+                        "email",
+                        "i18n.ts"
+                    ),
+                    templatesSrcDirPath: path.join(
+                        buildContext.themeSrcDirPath,
+                        "email",
+                        "templates",
+                    ),
                     themeNames: buildContext.themeNames,
                     keycloakifyBuildDirPath: buildContext.keycloakifyBuildDirPath,
                     locales: [ "en", "it" ],

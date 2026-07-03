@@ -1,5 +1,6 @@
-import { Body, Head, Html, Preview } from "jsx-email";
+import { Body, Head, Html, Img, Preview } from "jsx-email";
 import type { PropsWithChildren } from "react";
+import { getMessages } from "./i18n";
 
 const headCss = `
     @media all {
@@ -106,8 +107,11 @@ const baseUrl = import.meta.isJsxEmailPreview
 export const EmailLayout = ({
   locale,
   emailSubject,
+  themeName,
   children,
-}: PropsWithChildren<{ locale: string; emailSubject: string }>) => {
+}: PropsWithChildren<{ locale: string; emailSubject: string; themeName: string }>) => {
+  const messages = getMessages({ locale, themeName });
+  const logoUrl = `${baseUrl}/${messages["logo"]}`;
   return (
     <Html lang={locale}>
       <Head>
@@ -137,7 +141,7 @@ export const EmailLayout = ({
                                 <td className="wrapper"
                                     style={{ fontFamily: "Helvetica, sans-serif", fontSize: "16px", verticalAlign: "top", boxSizing: "border-box", padding: "24px" }}
                                     valign="top">
-                                    <img src={`${baseUrl}/onit-logo.png`} alt="" width="80" height="40" style={{ border: "0", outline: "none", textDecoration: "none", display: "block" }} />
+                                    <Img src={logoUrl} alt="logo" width="80" height="40" style={{ border: "0", outline: "none", textDecoration: "none", display: "block" }} />
                                 </td>
                             </tr>
 
@@ -155,7 +159,7 @@ export const EmailLayout = ({
                         </table>
 
                         {/* START FOOTER  */}
-                        <div className="footer" style={{ clear: "both", paddingTop: "24px", textAlign: "center", width: "100%" }}>
+                        <div className="footer" style={{ clear: "both", paddingTop: "24px", paddingBottom: "12px", textAlign: "center", width: "100%" }}>
                             <table role="presentation" border={0} cellPadding={0} cellSpacing={0} style={{ borderCollapse: "separate", width: "100%" }}>
                             <tr>
                                 <td className="content-block"
@@ -170,7 +174,7 @@ export const EmailLayout = ({
                                     <br/><br/>
                                     <span>
                                         <a href="https://onit.it/it/legal/informativa-privacy" style={{ textDecoration: "underline", color: "#9a9ea6", fontSize: "16px", textAlign: "center" }}>
-                                        Privacy &amp; cookie policy
+                                          Privacy &amp; cookie policy
                                         </a>
                                     </span>
                                 </td>
