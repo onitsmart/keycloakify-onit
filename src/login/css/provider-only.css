@@ -1,0 +1,6 @@
+.provider-only-theme #kc-form-login,
+.provider-only-theme .kcFormSocialAccountSectionClass > hr,
+.provider-only-theme .kcFormSocialAccountSectionClass > h2,
+.provider-only-theme .kcSignUpClass {
+    display: none;
+}

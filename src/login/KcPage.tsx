@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/onit-theme.css";
 import "./css/onit-support-theme.css";
+import "./css/provider-only.css";
 import "./css/main.css";
 import { Suspense, lazy } from "react";
 import type { ClassKey } from "keycloakify/login";
@@ -29,9 +30,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
         
         case "onit-operations":
         case "onit":    
+        case "onit--provider-only":
         default:
             realmDependentBodyClass = "onit-theme";
             break;
+    }
+
+    if (kcContext.themeName.includes("provider-only")) {
+        realmDependentBodyClass += " provider-only-theme";
     }
 
     const classes = {

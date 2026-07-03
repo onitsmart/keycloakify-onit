@@ -71,6 +71,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
             break;
 
         case "onit":
+        case "onit--provider-only":
         default:
             currentLogoUrl = logoOnitUrl;
             break;
