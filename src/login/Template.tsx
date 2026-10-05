@@ -220,7 +220,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 <p className="text-center mb-0">
                                     Onit Operations S.r.l. <br />
                                     Via dell'Arrigoni, 198 • 47522 Cesena (FC) IT <br />
-                                    Partita IVA 04808840401
+                                    {msg("footerVAT")} 04808840401
                                 </p>
                             );
                         }   
@@ -230,7 +230,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 <p className="text-center mb-0">
                                     Onit S.p.A. <br />
                                     Via dell'Arrigoni, 308 • 47522 Cesena (FC) IT <br />
-                                    Partita IVA 03240560403
+                                    {msg("footerVAT")} 03240560403
                                 </p>
                             );
                         }
@@ -240,7 +240,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     {(() => {
                         if (kcContext.themeName.toLowerCase().includes("ope")) {
                             return (
-                                <a href="mailto:assistenza@onit.com" target="_blank" rel="noopener noreferrer" className="px-2">Contatta il supporto</a>
+                                <a href="mailto:assistenza@onit.com" target="_blank" rel="noopener noreferrer" className="px-2">{msg("footerContactSupport")}</a>
                             );
                         }
                     })()}
