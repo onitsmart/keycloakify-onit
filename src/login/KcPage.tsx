@@ -24,19 +24,19 @@ export default function KcPage(props: { kcContext: KcContext }) {
     var realmDependentBodyClass: string;
 
     switch (kcContext.themeName.toLowerCase()) {
-        case "ope-support":
+        case "onit-support":
             realmDependentBodyClass = "ope-support-theme";
             break;
         
-        case "ope":
+        case "onit-operations":
         case "onit":    
-        case "onit--providers-only":
+        case "onit--provider-only":
         default:
             realmDependentBodyClass = "onit-theme";
             break;
     }
 
-    if (kcContext.themeName.toLowerCase().includes("providers-only")) {
+    if (kcContext.themeName.toLowerCase().includes("provider-only")) {
         realmDependentBodyClass += " providers-only-theme";
     }
 
@@ -102,5 +102,4 @@ export default function KcPage(props: { kcContext: KcContext }) {
         </Suspense>
     );
 }
-
 

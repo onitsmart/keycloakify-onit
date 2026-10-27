@@ -147,7 +147,7 @@
                   style="font-family: Helvetica, sans-serif; vertical-align: top; color: #9a9ea6; font-size: 16px; text-align: center;"
                   valign="top" align="center">
                   <span class="apple-link" style="color: #9a9ea6; font-size: 12px; text-align: center;">
-                    <#if (kcContext.themeName!"")?lower_case?contains("ope")>
+                    <#if (kcContext.themeName!"")?lower_case?contains("onit-operations") || (kcContext.themeName!"")?lower_case?contains("onit-support")>
                       Ope Support S.r.l. <br />
                       Via dell'Arrigoni, 198 • 47522 Cesena (FC) IT <br />
                       Partita IVA 04808840401

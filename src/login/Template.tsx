@@ -62,16 +62,16 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     var currentLogoUrl : string;
 
     switch (kcContext.themeName.toLowerCase()) {
-        case "ope-support":
+        case "onit-support":
             currentLogoUrl = logoOpeSupportUrl;
             break;
 
-        case "ope": 
+        case "onit-operations":
             currentLogoUrl = logoOpeUrl;
             break;
 
         case "onit":
-        case "onit--providers-only":
+        case "onit--provider-only":
         default:
             currentLogoUrl = logoOnitUrl;
             break;
@@ -215,7 +215,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 </a> */}
                 <address className="mb-0">
                     {(() => {
-                        if (kcContext.themeName.toLowerCase().includes("ope")) {
+                        if (["onit-operations", "onit-support"].includes(kcContext.themeName.toLowerCase())) {
                             return (
                                 <p className="text-center mb-0">
                                     Onit Operations S.r.l. <br />
@@ -238,7 +238,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 </address>
                 <div className="d-flex align-items-center justify-content-center flex-wrap gap-2 text-small">
                     {(() => {
-                        if (kcContext.themeName.toLowerCase().includes("ope")) {
+                        if (["onit-operations", "onit-support"].includes(kcContext.themeName.toLowerCase())) {
                             return (
                                 <a href="mailto:assistenza@onit.com" target="_blank" rel="noopener noreferrer" className="px-2">{msg("footerContactSupport")}</a>
                             );

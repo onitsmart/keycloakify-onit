@@ -30,12 +30,12 @@ export const getMessages: GetMessages = (props) => {
                     messages[key] = value;
                 });
                 break;
-            case "ope-support":
+            case "onit-support":
                 Object.entries(_messagesOpeSupport["it"]).forEach(([key, value]) => {
                     messages[key] = value;
                 });
                 break;
-            case "ope":
+            case "onit-operations":
                 Object.entries(_messagesOpe["it"]).forEach(([key, value]) => {
                     messages[key] = value;
                 });
@@ -54,12 +54,12 @@ export const getMessages: GetMessages = (props) => {
                     messages[key] = value;
                 });
                 break;
-            case "ope-support":
+            case "onit-support":
                 Object.entries(_messagesOpeSupport["en"]).forEach(([key, value]) => {
                     messages[key] = value;
                 });
                 break;
-            case "ope":
+            case "onit-operations":
                 Object.entries(_messagesOpe["en"]).forEach(([key, value]) => {
                     messages[key] = value;
                 });
